@@ -10,14 +10,30 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get(ConfigService);
   const port = configService.get<string>("PORT");
+
+  // Set up global JWT authentication guard
   const reflector = app.get(Reflector);
   app.useGlobalGuards(new JwtAuthGuard(reflector));
+
+  // Set up static assets and view engine
   app.useStaticAssets(join(__dirname, "..", "public"));
   app.setBaseViewsDir(join(__dirname, "..", "views"));
-  app.setViewEngine("ejs");
+
+  // Config pipes
   app.useGlobalPipes(new ValidationPipe());
+
+  // Config CORS
+  app.enableCors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+  });
+
+  // Start the application
   await app.listen(port ?? 3000);
 }
+
 bootstrap().catch((err) => {
   console.error("Error starting the application:", err);
   process.exit(1);
