@@ -5,6 +5,7 @@ import { join } from "path";
 import { ConfigService } from "@nestjs/config";
 import { ValidationPipe } from "@nestjs/common";
 import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
+import { TransformInterceptor } from "src/core/transform.interceptor";
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -21,6 +22,9 @@ async function bootstrap() {
 
   // Config pipes
   app.useGlobalPipes(new ValidationPipe());
+
+  // Config interceptors
+  app.useGlobalInterceptors(new TransformInterceptor());
 
   // Config CORS
   app.enableCors({
