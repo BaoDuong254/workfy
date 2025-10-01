@@ -84,5 +84,5 @@ export class RegisterUserDto {
   @IsNotEmpty({
     message: "Address không được để trống",
   })
-  Address: number;
+  address: number;
 }
