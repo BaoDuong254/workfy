@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { JwtService } from "@nestjs/jwt";
+import { Response } from "express";
 import ms from "ms";
 import { RegisterUserDto } from "src/users/dto/create-user.dto";
 import { IUser } from "src/users/users.interface";
@@ -25,7 +26,7 @@ export class AuthService {
     return null;
   }
 
-  login(user: IUser) {
+  async login(user: IUser, response: Response) {
     const { _id, name, email, role } = user;
     const payload = {
       sub: "token login",
@@ -36,9 +37,14 @@ export class AuthService {
       role,
     };
     const refreshToken = this.createRefreshToken(payload);
+    await this.usersService.updateUserToken(refreshToken, _id);
+    // set refresh token in httpOnly cookie
+    response.cookie("refresh_token", refreshToken, {
+      httpOnly: true,
+      maxAge: ms(this.configService.get<string>("JWT_REFRESH_EXPIRE") as ms.StringValue),
+    });
     return {
       access_token: this.jwtService.sign(payload),
-      refresh_token: refreshToken,
       user: {
         _id,
         name,
@@ -57,10 +63,11 @@ export class AuthService {
     };
   }
 
-  createRefreshToken = (payload: any) => {
+  createRefreshToken = (payload: any): string => {
     const refreshToken = this.jwtService.sign(payload, {
       secret: this.configService.get<string>("JWT_REFRESH_TOKEN_SECRET"),
       expiresIn: ms(this.configService.get<string>("JWT_REFRESH_EXPIRE") as ms.StringValue) / 1000,
     });
+    return refreshToken;
   };
 }
