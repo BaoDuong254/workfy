@@ -8,8 +8,6 @@
       "runtimeArgs": ["run", "start:debug", "--", "--inspect-brk"],
       "console": "integratedTerminal",
       "restart": true,
-      "protocol": "auto",
-      "port": 9229,
       "autoAttachChildProcesses": true
     }
   ]
