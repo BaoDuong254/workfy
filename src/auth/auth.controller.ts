@@ -15,10 +15,10 @@ export class AuthController {
   @Post("/login")
   @ResponseMessage("User login")
   handleLogin(@Req() req: Request & { user }, @Res({ passthrough: true }) response: Response) {
-    return this.authService.login(req.user, response);
+    return this.authService.login(req.user as IUser, response);
   }
 
-  @Public()
+  v;
   @ResponseMessage("Register a new user")
   @Post("/register")
   handleRegister(@Body() registerUserDto: RegisterUserDto) {
@@ -29,5 +29,13 @@ export class AuthController {
   @Get("/account")
   handleGetAccount(@User() user: IUser) {
     return { user };
+  }
+
+  @Public()
+  @ResponseMessage("Get User by refresh token")
+  @Get("/refresh")
+  handleRefreshToken(@Req() request: Request, @Res({ passthrough: true }) response: Response) {
+    const refresh_token = request.cookies["refresh_token"] as string;
+    return this.authService.processNewToken(refresh_token, response);
   }
 }
