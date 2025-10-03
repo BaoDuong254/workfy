@@ -1,0 +1,182 @@
+[
+  {
+    "_id": {
+      "$oid": "67010a1b9f8e7a2c4b5d6e7f"
+    },
+    "name": "Amazon",
+    "address": "410 Terry Ave N, Seattle, WA 98109, USA",
+    "description": "<h2>The Everything Store</h2><p>Amazon is the world's largest <strong>multinational technology company</strong>, revolutionizing how people shop, compute, and consume entertainment. From humble beginnings as an online bookstore to becoming a global powerhouse, Amazon continues to be <em>Earth's Most Customer-Centric Company</em>.</p><h3>Core Business Areas:</h3><ul><li><strong>E-commerce</strong> - The world's largest online marketplace serving 300+ million customers</li><li><strong>Amazon Web Services (AWS)</strong> - Leading cloud computing platform powering the internet</li><li><strong>Digital Streaming</strong> - Prime Video, Music, and Kindle ecosystem</li><li><strong>Artificial Intelligence</strong> - Alexa, machine learning, and robotics innovation</li><li><strong>Logistics & Fulfillment</strong> - Revolutionary supply chain and delivery networks</li></ul><h3>Innovation at Scale:</h3><p>With over <strong>1.5 million employees</strong> worldwide and operations in 100+ countries, Amazon continues to invent on behalf of customers with initiatives like:</p><ul><li>Same-day and drone delivery services</li><li>Cashier-less Amazon Go stores</li><li>Climate Pledge commitment to net-zero carbon by 2040</li></ul><blockquote>\"We're not competitor obsessed, we're customer obsessed. We start with the customer and work backwards.\" - Jeff Bezos</blockquote>",
+    "logo": "amzon-1686574798358.jpg",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:30:00.000Z",
+    "updatedAt": "2024-10-04T10:30:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a2b9f8e7a2c4b5d6e80"
+    },
+    "name": "Apple Inc",
+    "address": "1 Apple Park Way, Cupertino, CA 95014, USA",
+    "description": "<h2>Think Different</h2><p>Apple Inc. is the world's most valuable company and a pioneer in <strong>consumer electronics innovation</strong>. Founded in 1976, Apple has consistently redefined entire product categories and created technologies that enhance people's lives in meaningful ways.</p><h3>Iconic Product Ecosystem:</h3><ul><li><strong>iPhone</strong> - The world's most popular smartphone, sold over 2.2 billion units</li><li><strong>Mac</strong> - Premium computers loved by creatives and professionals worldwide</li><li><strong>iPad</strong> - Revolutionized tablet computing and mobile productivity</li><li><strong>Apple Watch</strong> - Leading smartwatch focused on health and fitness</li><li><strong>AirPods</strong> - Wireless audio innovation that defined a new category</li></ul><h3>Services & Software:</h3><p>Beyond hardware, Apple's <em>services ecosystem</em> generates billions in revenue:</p><ul><li><strong>iOS & macOS</strong> - World-class operating systems</li><li><strong>App Store</strong> - Premium marketplace with 1.8M+ apps</li><li><strong>Apple Music, TV+, iCloud</strong> - Digital services serving millions</li></ul><h4>Design Philosophy:</h4><blockquote>\"Simplicity is the ultimate sophistication. We believe that technology should be intuitive, accessible, and beautifully designed.\"</blockquote><p>With a market cap exceeding <strong>$3 trillion</strong>, Apple continues to push boundaries in privacy, sustainability, and user experience.</p>",
+    "logo": "apple-1686574900663.jpg",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:31:00.000Z",
+    "updatedAt": "2024-10-04T10:31:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a3b9f8e7a2c4b5d6e81"
+    },
+    "name": "Google",
+    "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+    "description": "<h2>Organize the World's Information</h2><p>Google LLC is the world's leading <strong>internet and technology company</strong>, on a mission to organize the world's information and make it universally accessible and useful. Founded in 1998, Google has grown from a search engine to a comprehensive technology ecosystem.</p><h3>Core Products & Services:</h3><ul><li><strong>Google Search</strong> - Processing 8.5+ billion searches daily in 100+ languages</li><li><strong>Android</strong> - World's most popular mobile operating system (71% market share)</li><li><strong>YouTube</strong> - Global video platform with 2+ billion monthly users</li><li><strong>Google Cloud</strong> - Enterprise cloud computing and AI services</li><li><strong>Gmail, Maps, Drive</strong> - Essential productivity and navigation tools</li></ul><h3>Innovation Leadership:</h3><p>Google's parent company <em>Alphabet Inc.</em> invests heavily in cutting-edge research:</p><ul><li><strong>Artificial Intelligence</strong> - DeepMind, Gemini AI, and machine learning breakthroughs</li><li><strong>Quantum Computing</strong> - Advancing quantum supremacy research</li><li><strong>Autonomous Vehicles</strong> - Waymo self-driving car technology</li><li><strong>Healthcare</strong> - Verily life sciences and health AI</li></ul><h4>Global Impact:</h4><blockquote>\"Don't be evil. Focus on the user and all else will follow.\" - Google's founding principles</blockquote><p>With <strong>190,000+ employees</strong> and operations worldwide, Google continues to shape the future of technology and human knowledge.</p>",
+    "logo": "google-1686574998397.png",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:32:00.000Z",
+    "updatedAt": "2024-10-04T10:32:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a4b9f8e7a2c4b5d6e82"
+    },
+    "name": "Lazada",
+    "address": "51 Bras Basah Road, Lazada One, Singapore 189554",
+    "description": "<h2>Southeast Asia's Leading E-commerce Ecosystem</h2><p>Lazada is the region's pioneering <strong>e-commerce platform</strong>, connecting millions of buyers and sellers across Southeast Asia. Founded in 2012 and backed by Alibaba Group, Lazada has transformed online shopping in one of the world's fastest-growing digital economies.</p><h3>Market Presence:</h3><ul><li><strong>6 Countries</strong> - Indonesia, Malaysia, Philippines, Singapore, Thailand, Vietnam</li><li><strong>155+ Million</strong> active consumers across the platform</li><li><strong>1+ Billion</strong> products available from local and international sellers</li><li><strong>100,000+</strong> brands and merchants in the ecosystem</li><li><strong>2+ Million</strong> deliveries processed daily</li></ul><h3>Comprehensive E-commerce Solutions:</h3><ul><li><strong>Marketplace Platform</strong> - Multi-category shopping destination</li><li><strong>LazMall</strong> - Premium brands and authentic products</li><li><strong>Logistics Network</strong> - Last-mile delivery across urban and rural areas</li><li><strong>Digital Payments</strong> - Secure payment solutions and financial services</li><li><strong>Live Streaming</strong> - Interactive shopping and entertainment</li></ul><h4>Regional Innovation:</h4><p>Lazada leverages <em>cutting-edge technology</em> to serve Southeast Asia's diverse markets:</p><blockquote>\"We're not just building an e-commerce platform; we're creating the digital infrastructure that empowers Southeast Asia's digital economy.\"</blockquote><p>Supported by Alibaba's technology and expertise, Lazada continues to drive digital transformation across the region.</p>",
+    "logo": "lazada-1686575062887.png",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:33:00.000Z",
+    "updatedAt": "2024-10-04T10:33:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a5b9f8e7a2c4b5d6e83"
+    },
+    "name": "Netflix",
+    "address": "100 Winchester Circle, Los Gatos, CA 95032, USA",
+    "description": "<h2>The World's Leading Streaming Entertainment Service</h2><p>Netflix revolutionized how the world watches television and movies, transforming from a DVD-by-mail service to the <strong>global streaming giant</strong> that defines modern entertainment. With original content that captivates audiences worldwide, Netflix continues to shape the future of storytelling.</p><h3>Global Entertainment Empire:</h3><ul><li><strong>230+ Million</strong> paid memberships across 190+ countries</li><li><strong>15,000+ Titles</strong> including award-winning original series and films</li><li><strong>30+ Languages</strong> with localized content and dubbing</li><li><strong>1+ Billion Hours</strong> watched weekly by subscribers globally</li><li><strong>$17+ Billion</strong> invested annually in original content creation</li></ul><h3>Content Innovation:</h3><p>Netflix's <em>data-driven approach</em> to content creation has produced cultural phenomena:</p><ul><li><strong>Original Series</strong> - Stranger Things, The Crown, Bridgerton, Squid Game</li><li><strong>Films</strong> - Roma, The Irishman, Don't Look Up, Red Notice</li><li><strong>Documentaries</strong> - My Octopus Teacher, The Social Dilemma</li><li><strong>International Content</strong> - Money Heist, Dark, Sacred Games</li></ul><h4>Technology Excellence:</h4><blockquote>\"We're a technology company that happens to be in the entertainment business. Our recommendation algorithms and streaming technology deliver personalized experiences to each member.\"</blockquote><p>Netflix's culture of <strong>freedom and responsibility</strong> attracts top talent worldwide, creating content that resonates across cultures and languages.</p>",
+    "logo": "netflix-1686706116042.png",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:34:00.000Z",
+    "updatedAt": "2024-10-04T10:34:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a6b9f8e7a2c4b5d6e84"
+    },
+    "name": "Adobe",
+    "address": "345 Park Avenue, San Jose, CA 95110, USA",
+    "description": "<h2>Creativity for All</h2><p>Adobe Inc. is the world's leader in <strong>digital creativity and document productivity software</strong>, empowering everyone from students to Fortune 500 companies to create, collaborate, and bring their ideas to life. For over 40 years, Adobe has been at the forefront of digital innovation.</p><h3>Creative Cloud Ecosystem:</h3><ul><li><strong>Photoshop</strong> - Industry standard for image editing and digital art</li><li><strong>Illustrator</strong> - Vector graphics and logo design platform</li><li><strong>Premiere Pro</strong> - Professional video editing software</li><li><strong>After Effects</strong> - Motion graphics and visual effects</li><li><strong>InDesign</strong> - Desktop publishing and layout design</li><li><strong>Adobe XD</strong> - User experience and interface design</li></ul><h3>Digital Document Solutions:</h3><ul><li><strong>Acrobat & PDF</strong> - Digital document standard used globally</li><li><strong>Adobe Sign</strong> - Electronic signature and workflow automation</li><li><strong>Document Cloud</strong> - Secure document sharing and collaboration</li></ul><h4>Creative Impact:</h4><p>Adobe's tools are used by <strong>90% of creative professionals</strong> worldwide:</p><ul><li><strong>26+ Million</strong> Creative Cloud subscribers</li><li><strong>Billions of PDFs</strong> created and shared daily</li><li>Used to create content for <strong>major films, brands, and publications</strong></li></ul><blockquote>\"We believe creativity is for everyone. Our mission is to give everyone the tools to imagine, create, and bring any digital experience to life.\"</blockquote>",
+    "logo": "photoshop-1686575180007.png",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:35:00.000Z",
+    "updatedAt": "2024-10-04T10:35:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a7b9f8e7a2c4b5d6e85"
+    },
+    "name": "PR Agency Global",
+    "address": "123 Madison Avenue, New York, NY 10016, USA",
+    "description": "<h2>Shaping Brand Stories That Matter</h2><p>PR Agency Global is an <strong>award-winning public relations and marketing communications</strong> powerhouse, crafting compelling narratives that drive business growth for Fortune 500 companies and innovative startups worldwide.</p><h3>Comprehensive PR Solutions:</h3><ul><li><strong>Strategic Communications</strong> - Brand positioning and corporate messaging</li><li><strong>Media Relations</strong> - Earned media coverage across traditional and digital platforms</li><li><strong>Digital Marketing</strong> - Social media campaigns and influencer partnerships</li><li><strong>Crisis Communications</strong> - Reputation management and crisis response</li><li><strong>Content Creation</strong> - Thought leadership and branded content</li><li><strong>Event Management</strong> - Product launches and corporate events</li></ul><h3>Industry Expertise:</h3><p>Our diverse client portfolio spans multiple industries:</p><ul><li><strong>Technology</strong> - Startups to enterprise software companies</li><li><strong>Healthcare</strong> - Pharmaceutical and medical device companies</li><li><strong>Financial Services</strong> - Banks, fintech, and investment firms</li><li><strong>Consumer Brands</strong> - Fashion, retail, and lifestyle companies</li><li><strong>B2B Services</strong> - Professional services and consulting firms</li></ul><h4>Results That Drive Growth:</h4><blockquote>\"We don't just tell stories; we create movements that drive measurable business impact for our clients.\"</blockquote><p>With offices in <strong>New York, Los Angeles, and London</strong>, we deliver integrated campaigns that reach global audiences and generate <em>meaningful engagement</em> across all touchpoints.</p>",
+    "logo": "pr-1686575233601.jpg",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:36:00.000Z",
+    "updatedAt": "2024-10-04T10:36:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a8b9f8e7a2c4b5d6e86"
+    },
+    "name": "Shopee",
+    "address": "5 Science Park Drive, Singapore 118265",
+    "description": "<h2>Southeast Asia's Fastest-Growing E-commerce Platform</h2><p>Shopee is the leading <strong>e-commerce platform in Southeast Asia and Taiwan</strong>, revolutionizing online shopping with innovative features like social commerce, gamification, and live streaming. Under Sea Limited, Shopee has become the region's most downloaded shopping app.</p><h3>Market Leadership:</h3><ul><li><strong>343+ Million</strong> active buyers across the platform</li><li><strong>11.1 Billion</strong> orders processed annually</li><li><strong>8 Markets</strong> - Singapore, Malaysia, Thailand, Indonesia, Philippines, Vietnam, Brazil, Taiwan</li><li><strong>2+ Million</strong> active sellers on the platform</li><li><strong>#1 Shopping App</strong> downloads in Southeast Asia for 4 consecutive years</li></ul><h3>Innovative Shopping Experience:</h3><ul><li><strong>Social Commerce</strong> - Interactive shopping with reviews and community features</li><li><strong>Live Streaming</strong> - Real-time product demonstrations and flash sales</li><li><strong>Shopee Games</strong> - Gamification to make shopping fun and engaging</li><li><strong>ShopeePay</strong> - Integrated digital wallet and payment solutions</li><li><strong>Free Shipping</strong> - Extensive logistics network with affordable delivery</li></ul><h4>Technology Innovation:</h4><p>Powered by <em>advanced algorithms and machine learning</em>:</p><ul><li><strong>Personalized Recommendations</strong> based on user behavior</li><li><strong>Smart Logistics</strong> optimizing delivery routes and times</li><li><strong>Fraud Prevention</strong> ensuring secure transactions</li></ul><blockquote>\"We believe shopping should be simple, enjoyable, and accessible to everyone. Every feature we build is designed to make our users smile.\"</blockquote>",
+    "logo": "shopee-1686575294231.png",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:37:00.000Z",
+    "updatedAt": "2024-10-04T10:37:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010a9b9f8e7a2c4b5d6e87"
+    },
+    "name": "Tiki Corporation",
+    "address": "52 Út Tịch, Ward 4, Tân Bình District, Ho Chi Minh City, Vietnam",
+    "description": "<h2>Making Happiness Accessible to Everyone</h2><p>Tiki Corporation is <strong>Vietnam's leading e-commerce platform</strong>, dedicated to bringing joy and convenience to millions of Vietnamese consumers through innovative technology and exceptional customer service. Founded in 2010, Tiki has grown to become the country's most trusted online shopping destination.</p><h3>Vietnam Market Leadership:</h3><ul><li><strong>10+ Million</strong> active customers nationwide</li><li><strong>3+ Million</strong> products across all categories</li><li><strong>100,000+</strong> sellers and brand partners</li><li><strong>63 Provinces</strong> delivery coverage across Vietnam</li><li><strong>2-Hour Delivery</strong> in Ho Chi Minh City and Hanoi</li></ul><h3>Comprehensive E-commerce Ecosystem:</h3><ul><li><strong>Tiki Trading</strong> - Direct retail with authentic products</li><li><strong>Tiki Marketplace</strong> - Platform for third-party sellers</li><li><strong>TikiNOW</strong> - Ultra-fast delivery service</li><li><strong>Tiki Books</strong> - Vietnam's largest online bookstore</li><li><strong>Tiki Fresh</strong> - Grocery delivery service</li><li><strong>AirPay</strong> - Digital payment and financial services</li></ul><h4>Customer-Centric Innovation:</h4><p>Tiki's <em>customer-first approach</em> drives every innovation:</p><ul><li><strong>Quality Guarantee</strong> - 100% authentic products promise</li><li><strong>Easy Returns</strong> - Hassle-free return policy</li><li><strong>24/7 Support</strong> - Dedicated customer service team</li></ul><blockquote>\"Our mission is simple: to make happiness accessible to everyone in Vietnam through the power of e-commerce and technology.\"</blockquote><p>As a homegrown Vietnamese brand, Tiki understands local culture and consumer needs, making online shopping a delightful experience for millions.</p>",
+    "logo": "tiki-1686575455267.jpg",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:38:00.000Z",
+    "updatedAt": "2024-10-04T10:38:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010aab9f8e7a2c4b5d6e88"
+    },
+    "name": "TikTok",
+    "address": "5800 Bristol Parkway, Culver City, CA 90230, USA",
+    "description": "<h2>Inspire Creativity and Bring Joy</h2><p>TikTok is the world's leading <strong>short-form video platform</strong> that has revolutionized social media and entertainment. Owned by ByteDance, TikTok empowers everyone to be a creator and discover content that sparks joy, learning, and connection across diverse communities worldwide.</p><h3>Global Cultural Phenomenon:</h3><ul><li><strong>1+ Billion</strong> monthly active users worldwide</li><li><strong>150+ Countries</strong> and regions where TikTok is available</li><li><strong>75+ Languages</strong> supported on the platform</li><li><strong>52 Minutes</strong> average daily time spent by users</li><li><strong>#1 App</strong> download in multiple countries for entertainment</li></ul><h3>Revolutionary Features:</h3><ul><li><strong>For You Page</strong> - AI-powered personalized content feed</li><li><strong>Creative Tools</strong> - Advanced video editing, effects, and filters</li><li><strong>Sounds & Music</strong> - Vast library driving viral trends and music discovery</li><li><strong>Duets & Collaborations</strong> - Interactive content creation features</li><li><strong>Live Streaming</strong> - Real-time interaction with followers</li><li><strong>TikTok Shop</strong> - Social commerce integration</li></ul><h4>Cultural Impact:</h4><p>TikTok has become a <em>cultural catalyst</em> that shapes:</p><ul><li><strong>Music Industry</strong> - Songs going viral and topping charts</li><li><strong>Dance Trends</strong> - Global dance challenges and movements</li><li><strong>Education</strong> - #LearnOnTikTok with millions of educational videos</li><li><strong>Small Business</strong> - Platform for entrepreneurs and creators to build audiences</li></ul><blockquote>\"We believe in the power of creativity to bring joy, spark learning, and inspire authentic human connection across cultures and communities.\"</blockquote><p>Through cutting-edge <strong>AI and machine learning</strong>, TikTok continues to redefine how people discover, create, and share content in the digital age.</p>",
+    "logo": "tiktok-1686575523674.jpg",
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:39:00.000Z",
+    "updatedAt": "2024-10-04T10:39:00.000Z",
+    "__v": 0
+  }
+]

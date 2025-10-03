@@ -17,6 +17,9 @@ class Company {
 
   @IsNotEmpty()
   name: string;
+
+  @IsNotEmpty()
+  logo: string;
 }
 
 export class CreateJobDto {
@@ -42,6 +45,9 @@ export class CreateJobDto {
   @ValidateNested()
   @Type(() => Company)
   company: Company;
+
+  @IsNotEmpty()
+  location: string;
 
   @IsNotEmpty({
     message: "Mức lương không được để trống",

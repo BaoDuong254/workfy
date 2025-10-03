@@ -1,0 +1,308 @@
+[
+  {
+    "_id": {
+      "$oid": "67010b1b9f8e7a2c4b5d6e89"
+    },
+    "name": "Senior Software Engineer - Cloud Infrastructure",
+    "skills": ["AWS", "Java", "Python", "Distributed Systems", "Microservices", "Kubernetes", "Docker"],
+    "company": {
+      "_id": "67010a1b9f8e7a2c4b5d6e7f",
+      "name": "Amazon",
+      "logo": "amzon-1686574798358.jpg"
+    },
+    "location": "USA",
+    "salary": 350000000,
+    "quantity": 5,
+    "level": "SENIOR",
+    "description": "<h2>Join Amazon's Cloud Infrastructure Team</h2><p>Are you passionate about building <strong>scalable cloud solutions</strong> that serve millions of customers worldwide? Amazon Web Services (AWS) is looking for talented engineers to join our dynamic cloud infrastructure team.</p><h3>What You'll Do:</h3><ul><li>Design and develop <em>highly scalable</em> distributed systems for AWS</li><li>Work with cutting-edge technologies including <strong>Kubernetes, Docker, and microservices</strong></li><li>Collaborate with cross-functional teams to deliver innovative cloud solutions</li><li>Optimize performance and reliability of critical AWS services</li><li>Participate in on-call rotations to ensure 99.99% uptime</li></ul><h3>Why Amazon?</h3><p>Join a company that's <strong>revolutionizing cloud computing</strong> and help build the infrastructure that powers the internet. You'll work alongside some of the brightest minds in technology and have access to unlimited learning opportunities.</p><blockquote>\"At Amazon, we're always Day 1. We're always looking to invent and simplify for our customers.\" - Jeff Bezos</blockquote>",
+    "startDate": "2024-10-15T00:00:00.000Z",
+    "endDate": "2024-11-15T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:40:00.000Z",
+    "updatedAt": "2024-10-04T10:40:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b2b9f8e7a2c4b5d6e8a"
+    },
+    "name": "iOS Developer - Consumer Applications",
+    "skills": ["Swift", "Objective-C", "iOS", "UIKit", "Core Data", "SwiftUI", "Xcode"],
+    "company": {
+      "_id": "67010a2b9f8e7a2c4b5d6e80",
+      "name": "Apple Inc",
+      "logo": "apple-1686574900663.jpg"
+    },
+    "location": "USA",
+    "salary": 310000000,
+    "quantity": 3,
+    "level": "SENIOR",
+    "description": "<h2>Shape the Future of iOS at Apple</h2><p>Join Apple's world-class iOS development team and create <strong>innovative applications</strong> that delight millions of users across the globe. Be part of the team that defines the future of mobile technology.</p><h3>Your Mission:</h3><ul><li>Develop cutting-edge iOS applications using <strong>Swift and SwiftUI</strong></li><li>Design intuitive user interfaces that follow Apple's Human Interface Guidelines</li><li>Collaborate with designers, product managers, and fellow engineers</li><li>Optimize app performance for the latest iPhone and iPad devices</li><li>Implement accessibility features to make apps inclusive for all users</li></ul><h3>The Apple Difference:</h3><p>At Apple, we believe that <em>technology should be personal, beautiful, and accessible</em>. You'll work on products that millions of people use every day, from the iPhone to the Apple Watch.</p><h4>Benefits Include:</h4><ul><li>Stock purchase plans and equity opportunities</li><li>Comprehensive health and wellness programs</li><li>On-site fitness facilities and wellness centers</li><li>Product discounts on all Apple products</li></ul>",
+    "startDate": "2024-10-20T00:00:00.000Z",
+    "endDate": "2024-11-20T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:41:00.000Z",
+    "updatedAt": "2024-10-04T10:41:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b3b9f8e7a2c4b5d6e8b"
+    },
+    "name": "Machine Learning Engineer - Search",
+    "skills": ["Machine Learning", "Python", "TensorFlow", "NLP", "C++", "PyTorch", "Deep Learning"],
+    "company": {
+      "_id": "67010a3b9f8e7a2c4b5d6e81",
+      "name": "Google",
+      "logo": "google-1686574998397.png"
+    },
+    "location": "USA",
+    "salary": 380000000,
+    "quantity": 2,
+    "level": "MANAGER",
+    "description": "<h2>Power Google Search with Machine Learning</h2><p>Join Google's Search team and work on <strong>machine learning algorithms</strong> that help billions of users find relevant information quickly and accurately. Be at the forefront of AI and search technology innovation.</p><h3>Key Responsibilities:</h3><ul><li>Develop and optimize <strong>machine learning models</strong> for search ranking</li><li>Work with massive datasets using <em>TensorFlow and PyTorch</em></li><li>Implement natural language processing algorithms for better query understanding</li><li>Collaborate with research teams to bring cutting-edge AI to production</li><li>Analyze search quality metrics and user behavior patterns</li></ul><h3>Impact at Scale:</h3><p>Your work will directly impact <strong>8.5 billion searches per day</strong> across Google's search ecosystem. You'll be solving some of the most challenging problems in information retrieval and machine learning.</p><h4>What Makes This Role Special:</h4><blockquote>\"We're not just building a search engine; we're organizing the world's information and making it universally accessible.\"</blockquote><p>Technologies you'll work with: <code>Python, C++, TensorFlow, BigQuery, Kubernetes</code></p>",
+    "startDate": "2024-10-25T00:00:00.000Z",
+    "endDate": "2024-11-25T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:42:00.000Z",
+    "updatedAt": "2024-10-04T10:42:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b4b9f8e7a2c4b5d6e8c"
+    },
+    "name": "Frontend Developer - E-commerce Platform",
+    "skills": ["React.js", "JavaScript", "HTML5", "CSS3", "E-commerce", "Redux", "TypeScript"],
+    "company": {
+      "_id": "67010a4b9f8e7a2c4b5d6e82",
+      "name": "Lazada",
+      "logo": "lazada-1686575062887.png"
+    },
+    "location": "SINGAPORE",
+    "salary": 145000000,
+    "quantity": 4,
+    "level": "FRESHER",
+    "description": "<h2>Build the Future of E-commerce in Southeast Asia</h2><p>Join Lazada's frontend development team and create <strong>seamless shopping experiences</strong> for millions of customers across Southeast Asia. Help build the region's leading e-commerce platform.</p><h3>What You'll Build:</h3><ul><li>Responsive and intuitive user interfaces using <strong>React.js and TypeScript</strong></li><li>Mobile-first designs that work flawlessly on all devices</li><li>High-performance e-commerce features: product catalogs, shopping carts, checkout flows</li><li>Real-time features like live chat and notifications</li><li>A/B testing frameworks for optimizing user experience</li></ul><h3>The Lazada Experience:</h3><p>Lazada is <em>Southeast Asia's leading e-commerce ecosystem</em>, serving over 155 million active consumers. You'll be part of a diverse, international team working in a fast-paced, innovative environment.</p><h4>Tech Stack:</h4><p><code>React.js • Redux • TypeScript • Webpack • Jest • Cypress</code></p><h4>Growth Opportunities:</h4><ul><li>Work with teams across 6 countries in Southeast Asia</li><li>Learn from industry experts and attend tech conferences</li><li>Career progression in a rapidly growing company</li></ul>",
+    "startDate": "2024-10-10T00:00:00.000Z",
+    "endDate": "2024-11-10T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:43:00.000Z",
+    "updatedAt": "2024-10-04T10:43:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b5b9f8e7a2c4b5d6e8d"
+    },
+    "name": "Content Recommendation Engineer",
+    "skills": ["Machine Learning", "Recommendation Systems", "Python", "Spark", "Data Mining", "Scala", "Big Data"],
+    "company": {
+      "_id": "67010a5b9f8e7a2c4b5d6e83",
+      "name": "Netflix",
+      "logo": "netflix-1686706116042.png"
+    },
+    "location": "USA",
+    "salary": 330000000,
+    "quantity": 3,
+    "level": "SENIOR",
+    "description": "<h2>Personalize Entertainment for 230+ Million Members</h2><p>Join Netflix's recommendation engine team and help members discover their next favorite show or movie. Build <strong>world-class personalization systems</strong> that serve billions of recommendations daily.</p><h3>Your Impact:</h3><ul><li>Design and implement <strong>machine learning algorithms</strong> for content recommendation</li><li>Work with massive datasets using <em>Spark, Kafka, and Cassandra</em></li><li>Develop real-time recommendation systems that adapt to user behavior</li><li>Optimize recommendation quality through A/B testing and experimentation</li><li>Collaborate with data scientists and product managers globally</li></ul><h3>The Netflix Culture:</h3><blockquote>\"We're a team, not a family. We're like a pro sports team where everyone plays at the top of their game.\"</blockquote><p>At Netflix, you'll enjoy <strong>unlimited vacation</strong>, competitive compensation, and the freedom to make impactful decisions.</p><h4>Technical Challenges:</h4><ul><li>Processing <strong>1+ billion hours</strong> of viewing data monthly</li><li>Serving recommendations in <strong>under 100ms</strong> globally</li><li>Supporting <strong>190+ countries</strong> with localized content</li></ul><p>Technologies: <code>Python • Scala • Spark • TensorFlow • Kubernetes • AWS</code></p>",
+    "startDate": "2024-10-12T00:00:00.000Z",
+    "endDate": "2024-11-12T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:44:00.000Z",
+    "updatedAt": "2024-10-04T10:44:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b6b9f8e7a2c4b5d6e8e"
+    },
+    "name": "UI/UX Designer - Creative Suite",
+    "skills": ["UI/UX Design", "Adobe XD", "Prototyping", "User Research", "Design Systems", "Figma", "Photoshop"],
+    "company": {
+      "_id": "67010a6b9f8e7a2c4b5d6e84",
+      "name": "Adobe",
+      "logo": "photoshop-1686575180007.png"
+    },
+    "location": "USA",
+    "salary": 260000000,
+    "quantity": 2,
+    "level": "SENIOR",
+    "description": "<h2>Design the Tools That Empower Creativity</h2><p>Join Adobe's Creative Suite team and design <strong>intuitive, powerful user interfaces</strong> that shape the creative workflow for millions of designers, photographers, and content creators worldwide.</p><h3>What You'll Create:</h3><ul><li>User interfaces for industry-leading applications like <strong>Photoshop, Illustrator, and XD</strong></li><li>Innovative design systems that scale across multiple platforms</li><li>Accessibility-first designs that include all users</li><li>Prototypes and interactive mockups using Adobe XD and Figma</li><li>User research studies to validate design decisions</li></ul><h3>The Creative Challenge:</h3><p>You'll be designing for <em>creative professionals</em> who depend on our tools to bring their visions to life. Every pixel matters, every interaction counts.</p><h4>Design Impact:</h4><ul><li><strong>90% of creative professionals</strong> worldwide use Adobe tools</li><li>Your designs will be used by <strong>26+ million</strong> Creative Cloud subscribers</li><li>Work on features seen by millions daily</li></ul><blockquote>\"Creativity for all\" - Adobe's mission drives everything we do</blockquote><p>Tools you'll use: <code>Adobe XD • Figma • Sketch • Principle • After Effects</code></p>",
+    "startDate": "2024-10-18T00:00:00.000Z",
+    "endDate": "2024-11-18T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:45:00.000Z",
+    "updatedAt": "2024-10-04T10:45:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b7b9f8e7a2c4b5d6e8f"
+    },
+    "name": "Digital Marketing Specialist",
+    "skills": [
+      "Digital Marketing",
+      "Social Media",
+      "SEO",
+      "Content Marketing",
+      "Analytics",
+      "Google Ads",
+      "Facebook Ads"
+    ],
+    "company": {
+      "_id": "67010a7b9f8e7a2c4b5d6e85",
+      "name": "PR Agency Global",
+      "logo": "pr-1686575233601.jpg"
+    },
+    "location": "USA",
+    "salary": 130000000,
+    "quantity": 6,
+    "level": "FRESHER",
+    "description": "<h2>Drive Brand Success Through Digital Innovation</h2><p>Join our award-winning PR agency and lead <strong>digital marketing campaigns</strong> for Fortune 500 clients across various industries. Develop strategic initiatives that drive measurable brand awareness and engagement.</p><h3>Campaign Leadership:</h3><ul><li>Manage integrated campaigns across <strong>social media, SEO, and paid advertising</strong></li><li>Develop content strategies that resonate with target audiences</li><li>Analyze campaign performance using advanced analytics tools</li><li>Collaborate with creative teams to produce compelling brand content</li><li>Present campaign results and insights to C-level executives</li></ul><h3>Client Portfolio:</h3><p>Work with <em>industry-leading brands</em> including tech startups, fashion retailers, and healthcare companies. Your campaigns will reach millions of consumers globally.</p><h4>Growth Opportunities:</h4><ul><li>Lead client presentations and pitch new business</li><li>Attend industry conferences and networking events</li><li>Mentor junior team members and interns</li><li>Develop expertise in emerging marketing technologies</li></ul><p>Platforms: <code>Google Ads • Facebook Business • LinkedIn Campaign Manager • HubSpot • Salesforce</code></p>",
+    "startDate": "2024-10-08T00:00:00.000Z",
+    "endDate": "2024-11-08T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:46:00.000Z",
+    "updatedAt": "2024-10-04T10:46:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b8b9f8e7a2c4b5d6e90"
+    },
+    "name": "Backend Developer - Microservices",
+    "skills": ["Java", "Spring Boot", "Microservices", "MySQL", "Docker", "Redis", "Kubernetes"],
+    "company": {
+      "_id": "67010a8b9f8e7a2c4b5d6e86",
+      "name": "Shopee",
+      "logo": "shopee-1686575294231.png"
+    },
+    "location": "SINGAPORE",
+    "salary": 165000000,
+    "quantity": 4,
+    "level": "FRESHER",
+    "description": "<h2>Build Southeast Asia's Leading E-commerce Platform</h2><p>Join Shopee's backend engineering team and develop <strong>scalable microservices</strong> that power millions of transactions daily across Southeast Asia's fastest-growing e-commerce platform.</p><h3>Technical Excellence:</h3><ul><li>Design and implement <strong>high-performance backend services</strong> using Java and Spring Boot</li><li>Build microservices architecture that scales to millions of users</li><li>Optimize database performance for high-traffic e-commerce operations</li><li>Implement real-time features like live streaming and flash sales</li><li>Work with containerized deployments using Docker and Kubernetes</li></ul><h3>Scale & Impact:</h3><p>Shopee processes <strong>11.1 billion orders annually</strong> and serves over <em>343 million active buyers</em>. Your code will directly impact the shopping experience for millions of users.</p><h4>Technical Stack:</h4><p><code>Java • Spring Boot • MySQL • Redis • Kafka • Kubernetes • Docker</code></p><h4>The Shopee Experience:</h4><ul><li>Work in an agile, fast-paced environment</li><li>Collaborate with international teams across multiple countries</li><li>Learn from senior engineers with deep e-commerce expertise</li><li>Contribute to open-source projects and tech talks</li></ul>",
+    "startDate": "2024-10-14T00:00:00.000Z",
+    "endDate": "2024-11-14T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:47:00.000Z",
+    "updatedAt": "2024-10-04T10:47:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010b9b9f8e7a2c4b5d6e91"
+    },
+    "name": "Product Manager - Mobile Commerce",
+    "skills": [
+      "Product Management",
+      "Mobile Commerce",
+      "Analytics",
+      "Agile",
+      "Market Research",
+      "Scrum",
+      "A/B Testing"
+    ],
+    "company": {
+      "_id": "67010a9b9f8e7a2c4b5d6e87",
+      "name": "Tiki Corporation",
+      "logo": "tiki-1686575455267.jpg"
+    },
+    "location": "HANOI",
+    "salary": 60000000,
+    "quantity": 2,
+    "level": "INTERN",
+    "description": "<h2>Shape Vietnam's E-commerce Future</h2><p>Join Tiki as a Product Manager and drive the <strong>product strategy</strong> for Vietnam's leading mobile commerce platform. Lead cross-functional teams to deliver innovative shopping experiences for millions of Vietnamese consumers.</p><h3>Product Leadership:</h3><ul><li>Define product roadmaps for <strong>mobile-first e-commerce features</strong></li><li>Conduct market research and competitive analysis in the Vietnamese market</li><li>Lead agile development teams including designers and engineers</li><li>Analyze user behavior and conversion metrics to drive product decisions</li><li>Collaborate with stakeholders to prioritize features and initiatives</li></ul><h3>Learning Opportunities:</h3><p>As an intern, you'll work closely with <em>senior product managers</em> and gain hands-on experience in:</p><ul><li><strong>Product discovery</strong> and user research methodologies</li><li><strong>Data analysis</strong> using SQL and analytics tools</li><li><strong>A/B testing</strong> and experimentation frameworks</li><li><strong>Agile methodologies</strong> and scrum practices</li></ul><h4>Tiki's Mission:</h4><blockquote>\"Making happiness accessible to everyone\" - We're building Vietnam's most customer-centric platform</blockquote><p>Tools you'll learn: <code>Jira • Confluence • Google Analytics • Mixpanel • Figma</code></p>",
+    "startDate": "2024-10-22T00:00:00.000Z",
+    "endDate": "2024-11-22T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:48:00.000Z",
+    "updatedAt": "2024-10-04T10:48:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67010bab9f8e7a2c4b5d6e92"
+    },
+    "name": "Video Algorithm Engineer",
+    "skills": ["Video Processing", "Computer Vision", "C++", "Machine Learning", "CUDA", "OpenCV", "FFmpeg"],
+    "company": {
+      "_id": "67010aab9f8e7a2c4b5d6e88",
+      "name": "TikTok",
+      "logo": "tiktok-1686575523674.jpg"
+    },
+    "location": "USA",
+    "salary": 350000000,
+    "quantity": 3,
+    "level": "MANAGER",
+    "description": "<h2>Power the World's Most Creative Video Platform</h2><p>Join TikTok's video algorithm team and develop <strong>cutting-edge video processing algorithms</strong> that enhance video quality, compression, and real-time effects for over 1 billion users worldwide.</p><h3>Technical Innovation:</h3><ul><li>Develop advanced <strong>video compression algorithms</strong> for optimal streaming quality</li><li>Implement real-time video effects and filters using computer vision</li><li>Optimize video processing pipelines for mobile and web platforms</li><li>Work with GPU programming (CUDA) for high-performance video processing</li><li>Research and implement emerging video technologies like AI-enhanced quality</li></ul><h3>Global Impact:</h3><p>Your algorithms will process <strong>billions of videos</strong> uploaded daily, ensuring smooth playback and creative experiences for users across 150+ countries.</p><h4>Technical Challenges:</h4><ul><li>Processing <strong>1+ billion</strong> video uploads daily</li><li>Delivering content in <strong>under 200ms</strong> globally</li><li>Supporting <strong>75+ languages</strong> and diverse content formats</li><li>Scaling infrastructure for <strong>peak traffic</strong> during viral moments</li></ul><h4>Innovation Culture:</h4><blockquote>\"Inspire creativity and bring joy\" - TikTok's mission drives our technical excellence</blockquote><p>Technologies: <code>C++ • Python • OpenCV • FFmpeg • CUDA • TensorFlow • Kubernetes</code></p>",
+    "startDate": "2024-10-16T00:00:00.000Z",
+    "endDate": "2024-11-16T00:00:00.000Z",
+    "isActive": true,
+    "createdBy": {
+      "_id": "68e015b3464e90c3c653cff4",
+      "email": "admin@gmail.com"
+    },
+    "deleted": false,
+    "deletedAt": null,
+    "createdAt": "2024-10-04T10:49:00.000Z",
+    "updatedAt": "2024-10-04T10:49:00.000Z",
+    "__v": 0
+  }
+]

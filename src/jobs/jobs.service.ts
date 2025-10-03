@@ -13,7 +13,8 @@ export class JobsService {
   constructor(@InjectModel(Job.name) private jobModel: SoftDeleteModel<JobDocument>) {}
 
   async create(createJobDto: CreateJobDto, user: IUser) {
-    const { name, skills, company, salary, quantity, level, description, startDate, endDate, isActive } = createJobDto;
+    const { name, skills, company, salary, quantity, level, description, startDate, endDate, isActive, location } =
+      createJobDto;
 
     const newJob = await this.jobModel.create({
       name,
@@ -26,6 +27,7 @@ export class JobsService {
       startDate,
       endDate,
       isActive,
+      location,
       createdBy: {
         _id: user._id,
         email: user.email,
