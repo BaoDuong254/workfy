@@ -7,6 +7,7 @@ import { UsersModule } from "./users/users.module";
 import { AuthModule } from "./auth/auth.module";
 import { CompaniesModule } from "./companies/companies.module";
 import { JobsModule } from "./jobs/jobs.module";
+import { FilesModule } from "./files/files.module";
 import MongooseDelete from "mongoose-delete";
 
 @Module({
@@ -29,6 +30,7 @@ import MongooseDelete from "mongoose-delete";
     AuthModule,
     CompaniesModule,
     JobsModule,
+    FilesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
