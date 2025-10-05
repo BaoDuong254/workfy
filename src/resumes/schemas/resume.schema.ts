@@ -60,9 +60,6 @@ export class Resume {
   updatedAt: Date;
 
   @Prop()
-  deleted: boolean;
-
-  @Prop()
   deletedAt: Date;
 }
 
