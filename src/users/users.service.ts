@@ -118,8 +118,8 @@ export class UsersService {
     }
 
     const foundUser = await this.userModel.findById(id);
-    if (foundUser?.role === "ADMIN") {
-      throw new BadRequestException("Không thể xóa user ADMIN");
+    if (foundUser && foundUser.email === "admin@gmail.com") {
+      throw new BadRequestException("Không thể xóa tài khoản admin@gmail.com");
     }
 
     await this.userModel.updateOne(
