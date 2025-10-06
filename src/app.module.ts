@@ -17,6 +17,7 @@ import { RolesModule } from "./roles/roles.module";
 import { DatabasesModule } from "./databases/databases.module";
 import MongooseDelete from "mongoose-delete";
 import { SubscribersModule } from "src/subscribers/subscribers.module";
+import { MailModule } from "./mail/mail.module";
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { SubscribersModule } from "src/subscribers/subscribers.module";
     RolesModule,
     DatabasesModule,
     SubscribersModule,
+    MailModule,
   ],
   controllers: [AppController],
   providers: [AppService],
