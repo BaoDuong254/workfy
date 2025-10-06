@@ -19,9 +19,18 @@ import MongooseDelete from "mongoose-delete";
 import { SubscribersModule } from "src/subscribers/subscribers.module";
 import { MailModule } from "./mail/mail.module";
 import { ScheduleModule } from "@nestjs/schedule";
+import { ThrottlerModule } from "@nestjs/throttler";
 
 @Module({
   imports: [
+    ThrottlerModule.forRoot({
+      throttlers: [
+        {
+          ttl: 60000,
+          limit: 10,
+        },
+      ],
+    }),
     ScheduleModule.forRoot(),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
