@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import { ExecutionContext, ForbiddenException, Injectable, UnauthorizedException } from "@nestjs/common";
 import { Reflector } from "@nestjs/core";
 import { AuthGuard } from "@nestjs/passport";
@@ -31,7 +35,7 @@ export class JwtAuthGuard extends AuthGuard("jwt") {
 
     // You can throw an exception based on either "info" or "err" arguments
     if (err || !user) {
-      throw err || new UnauthorizedException("Token không hợp lệ or không có token ở Bearer Token ở Header request!");
+      throw err || new UnauthorizedException("Token không hợp lệ hoặc không có token ở Bearer Token ở Header request!");
     }
 
     //check permissions

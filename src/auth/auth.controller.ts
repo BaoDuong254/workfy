@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Body, Controller, Get, Post, Req, Res, UseGuards } from "@nestjs/common";
 import { AuthService } from "src/auth/auth.service";
 import { LocalAuthGuard } from "src/auth/local-auth.guard";
@@ -22,6 +24,7 @@ export class AuthController {
     return this.authService.login(req.user as IUser, response);
   }
 
+  @Public()
   @ResponseMessage("Register a new user")
   @Post("/register")
   handleRegister(@Body() registerUserDto: RegisterUserDto) {
