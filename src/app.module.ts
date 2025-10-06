@@ -18,9 +18,11 @@ import { DatabasesModule } from "./databases/databases.module";
 import MongooseDelete from "mongoose-delete";
 import { SubscribersModule } from "src/subscribers/subscribers.module";
 import { MailModule } from "./mail/mail.module";
+import { ScheduleModule } from "@nestjs/schedule";
 
 @Module({
   imports: [
+    ScheduleModule.forRoot(),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({

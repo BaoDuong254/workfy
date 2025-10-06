@@ -22,7 +22,11 @@ async function bootstrap() {
   app.setBaseViewsDir(join(__dirname, "..", "views"));
 
   // Config pipes
-  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+    })
+  );
 
   // Config interceptors
   app.useGlobalInterceptors(new TransformInterceptor(reflector));
