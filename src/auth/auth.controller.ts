@@ -5,10 +5,14 @@ import { Public, ResponseMessage, User } from "src/decorator/customize";
 import { RegisterUserDto } from "src/users/dto/create-user.dto";
 import type { Request, Response } from "express";
 import type { IUser } from "src/users/users.interface";
+import { RolesService } from "src/roles/roles.service";
 
 @Controller("auth")
 export class AuthController {
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private rolesService: RolesService
+  ) {}
 
   @Public()
   @UseGuards(LocalAuthGuard)
@@ -18,7 +22,6 @@ export class AuthController {
     return this.authService.login(req.user as IUser, response);
   }
 
-  v;
   @ResponseMessage("Register a new user")
   @Post("/register")
   handleRegister(@Body() registerUserDto: RegisterUserDto) {
@@ -27,7 +30,9 @@ export class AuthController {
 
   @ResponseMessage("Get user info")
   @Get("/account")
-  handleGetAccount(@User() user: IUser) {
+  async handleGetAccount(@User() user: IUser) {
+    const temp = (await this.rolesService.findOne(user.role._id)) as any;
+    user.permissions = temp.permissions;
     return { user };
   }
 
