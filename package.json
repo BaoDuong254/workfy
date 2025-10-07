@@ -31,6 +31,7 @@
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/schedule": "^6.0.1",
     "@nestjs/swagger": "^11.2.0",
+    "@nestjs/terminus": "^11.0.0",
     "@nestjs/throttler": "^6.4.0",
     "@types/bcrypt": "^6.0.0",
     "@types/mongoose-delete": "^1.0.6",
