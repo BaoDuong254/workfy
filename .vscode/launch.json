@@ -8,7 +8,8 @@
       "runtimeArgs": ["run", "start:debug", "--", "--inspect-brk"],
       "console": "integratedTerminal",
       "restart": true,
-      "autoAttachChildProcesses": true
+      "autoAttachChildProcesses": true,
+      "cwd": "${workspaceFolder}/server"
     }
   ]
 }
