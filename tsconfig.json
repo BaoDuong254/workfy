@@ -25,5 +25,6 @@
     "paths": {
       "src/*": ["./src/*"]
     }
-  }
+  },
+  "exclude": ["documentation/**/*", "dist/**/*", "node_modules"]
 }
