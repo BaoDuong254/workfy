@@ -57,8 +57,8 @@ async function bootstrap() {
 
   // Swagger setup
   const config = new DocumentBuilder()
-    .setTitle("Jobify")
-    .setDescription("The Jobify API description")
+    .setTitle("Workfy")
+    .setDescription("The Workfy API description")
     .setVersion("1.0")
     .addBearerAuth(
       {
