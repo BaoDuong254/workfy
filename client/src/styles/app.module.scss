@@ -1,0 +1,53 @@
+// @import 'variables.scss';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global layout-app class (not module) */
+:global(.layout-app) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-app {
+  flex: 1;
+  width: 100%;
+  min-height: 0; /* Important for flex children */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main layout wrapper with sticky footer */
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Ensure body takes full height and prevent horizontal scroll */
+:global(body) {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+:global(*) {
+  box-sizing: border-box;
+}
