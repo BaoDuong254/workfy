@@ -20,7 +20,7 @@ import { callLogout } from "config/api";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { isMobile } from "react-device-detect";
 import type { MenuProps } from "antd";
-import { setLogoutAction } from "@/redux/slice/accountSlide";
+import { setLogoutAction } from "@/redux/slice/accountSlice";
 import { ALL_PERMISSIONS } from "@/config/permissions";
 
 const { Content, Footer, Sider } = Layout;

@@ -81,7 +81,11 @@ const UserResume = (props: any) => {
 };
 
 const UserUpdateInfo = (props: any) => {
-  return <div>//todo</div>;
+  return <div>Cập nhật thông tin</div>;
+};
+
+const UserUpdatePassword = (props: any) => {
+  return <div>Thay đổi mật khẩu</div>;
 };
 
 const JobByEmail = (props: any) => {
@@ -175,7 +179,7 @@ const ManageAccount = (props: IProps) => {
     {
       key: "user-password",
       label: `Thay đổi mật khẩu`,
-      children: `//todo`,
+      children: <UserUpdatePassword />,
     },
   ];
 

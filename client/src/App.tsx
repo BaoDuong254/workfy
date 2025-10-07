@@ -16,7 +16,7 @@ import PermissionPage from "./pages/admin/permission";
 import ResumePage from "./pages/admin/resume";
 import RolePage from "./pages/admin/role";
 import UserPage from "./pages/admin/user";
-import { fetchAccount } from "./redux/slice/accountSlide";
+import { fetchAccount } from "./redux/slice/accountSlice";
 import LayoutApp from "./components/share/layout.app";
 import JobPage from "./pages/admin/job";
 import ViewUpsertJob from "./components/admin/job/upsert.job";

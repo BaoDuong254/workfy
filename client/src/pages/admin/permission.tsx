@@ -8,7 +8,7 @@ import { useState, useRef } from "react";
 import dayjs from "dayjs";
 import { callDeletePermission } from "@/config/api";
 import queryString from "query-string";
-import { fetchPermission } from "@/redux/slice/permissionSlide";
+import { fetchPermission } from "@/redux/slice/permissionSlice";
 import ViewDetailPermission from "@/components/admin/permission/view.permission";
 import ModalPermission from "@/components/admin/permission/modal.permission";
 import { colorMethod } from "@/config/utils";

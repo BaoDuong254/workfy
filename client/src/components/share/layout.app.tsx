@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { setRefreshTokenAction } from "@/redux/slice/accountSlide";
+import { setRefreshTokenAction } from "@/redux/slice/accountSlice";
 import { message } from "antd";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

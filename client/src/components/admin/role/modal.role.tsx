@@ -15,7 +15,7 @@ import ModuleApi from "./module.api";
 import { useState, useEffect } from "react";
 import _ from "lodash";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { resetSingleRole } from "@/redux/slice/roleSlide";
+import { resetSingleRole } from "@/redux/slice/roleSlice";
 
 interface IProps {
   openModal: boolean;

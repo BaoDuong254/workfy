@@ -33,7 +33,6 @@ const ApplyModal = (props: IProps) => {
       setIsModalOpen(false);
       navigate(`/login?callback=${window.location.href}`);
     } else {
-      //todo
       if (jobDetail) {
         const res = await callCreateResume(urlCV, jobDetail?.company?._id, jobDetail?._id);
         if (res.data) {

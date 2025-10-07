@@ -9,7 +9,7 @@ import dayjs from "dayjs";
 import { callDeleteJob } from "@/config/api";
 import queryString from "query-string";
 import { useNavigate } from "react-router-dom";
-import { fetchJob } from "@/redux/slice/jobSlide";
+import { fetchJob } from "@/redux/slice/jobSlice";
 import Access from "@/components/share/access";
 import { ALL_PERMISSIONS } from "@/config/permissions";
 

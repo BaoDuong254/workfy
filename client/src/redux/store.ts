@@ -1,11 +1,11 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
-import accountReducer from "./slice/accountSlide";
-import companyReducer from "./slice/companySlide";
-import userReducer from "./slice/userSlide";
-import jobReducer from "./slice/jobSlide";
-import resumeReducer from "./slice/resumeSlide";
-import permissionReducer from "./slice/permissionSlide";
-import roleReducer from "./slice/roleSlide";
+import accountReducer from "./slice/accountSlice";
+import companyReducer from "./slice/companySlice";
+import userReducer from "./slice/userSlice";
+import jobReducer from "./slice/jobSlice";
+import resumeReducer from "./slice/resumeSlice";
+import permissionReducer from "./slice/permissionSlice";
+import roleReducer from "./slice/roleSlice";
 
 export const store = configureStore({
   reducer: {
