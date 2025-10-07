@@ -42,6 +42,11 @@ export class DatabasesService implements OnModuleInit {
       // create role
       if (countRole === 0) {
         const permissions = await this.permissionModel.find({}).select("_id");
+        const permissionsUploadFile = await this.permissionModel
+          .find({
+            name: { $in: ["Upload Single File", "Create a Resume", "Fetch resumes by user"] },
+          })
+          .select("_id");
         await this.roleModel.insertMany([
           {
             name: ADMIN_ROLE,
@@ -53,7 +58,7 @@ export class DatabasesService implements OnModuleInit {
             name: USER_ROLE,
             description: "Người dùng/Ứng viên sử dụng hệ thống",
             isActive: true,
-            permissions: [],
+            permissions: permissionsUploadFile,
           },
         ]);
       }
@@ -63,7 +68,7 @@ export class DatabasesService implements OnModuleInit {
         const userRole = await this.roleModel.findOne({ name: USER_ROLE });
         await this.userModel.insertMany([
           {
-            name: "I'm admin",
+            name: "Admin",
             email: "admin@gmail.com",
             password: this.userService.hashPassword(this.configService.get<string>("INIT_PASSWORD") as string),
             age: 69,
@@ -72,17 +77,8 @@ export class DatabasesService implements OnModuleInit {
             role: adminRole?._id,
           },
           {
-            name: "I'm user 1",
-            email: "user1@gmail.com",
-            password: this.userService.hashPassword(this.configService.get<string>("INIT_PASSWORD") as string),
-            age: 96,
-            gender: "MALE",
-            address: "VietNam",
-            role: adminRole?._id,
-          },
-          {
-            name: "I'm normal user",
-            email: "user2@gmail.com",
+            name: "John Doe",
+            email: "user@gmail.com",
             password: this.userService.hashPassword(this.configService.get<string>("INIT_PASSWORD") as string),
             age: 23,
             gender: "MALE",
