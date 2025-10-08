@@ -2,6 +2,10 @@
 
 Workfy is a comprehensive job search and CV distribution platform specifically designed for developers. It provides a seamless experience for job seekers to find opportunities and for companies to discover talented developers.
 
+## Installation
+
+For setup and installation instructions, please refer to the **README.md** files located in both the `/client` and `/server` folders. Each folder contains detailed steps for installing dependencies, configuring environment variables, and running the project locally.
+
 ## Features
 
 ### For Job Seekers
