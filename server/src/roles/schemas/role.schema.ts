@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
+import MongooseDelete from "mongoose-delete";
 import { Permission } from "src/permissions/schemas/permission.schema";
 
 export type RoleDocument = HydratedDocument<Role>;
@@ -47,3 +48,5 @@ export class Role {
 }
 
 export const RoleSchema = SchemaFactory.createForClass(Role);
+
+RoleSchema.plugin(MongooseDelete, { deletedAt: true, deletedBy: false, overrideMethods: "all" });

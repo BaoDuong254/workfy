@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
+import MongooseDelete from "mongoose-delete";
 
 export type CompanyDocument = HydratedDocument<Company>;
 
@@ -46,3 +47,5 @@ export class Company {
 }
 
 export const CompanySchema = SchemaFactory.createForClass(Company);
+
+CompanySchema.plugin(MongooseDelete, { deletedAt: true, deletedBy: false, overrideMethods: "all" });

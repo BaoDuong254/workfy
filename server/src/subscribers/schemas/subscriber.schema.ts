@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
+import MongooseDelete from "mongoose-delete";
 
 export type SubscriberDocument = HydratedDocument<Subscriber>;
 
@@ -43,3 +44,5 @@ export class Subscriber {
 }
 
 export const SubscriberSchema = SchemaFactory.createForClass(Subscriber);
+
+SubscriberSchema.plugin(MongooseDelete, { deletedAt: true, deletedBy: false, overrideMethods: "all" });
