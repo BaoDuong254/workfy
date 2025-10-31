@@ -56,7 +56,13 @@ export const companySlide = createSlice({
     builder.addCase(fetchCompany.fulfilled, (state, action) => {
       if (action.payload && action.payload.data) {
         state.isFetching = false;
-        state.meta = action.payload.data.meta;
+        const responseMeta = action.payload.data.meta as any;
+        state.meta = {
+          current: responseMeta.current || responseMeta.currentPage || 1,
+          pageSize: responseMeta.pageSize || 10,
+          pages: responseMeta.pages || 0,
+          total: responseMeta.total || 0,
+        };
         state.result = action.payload.data.result;
       }
       // Add user to the state array

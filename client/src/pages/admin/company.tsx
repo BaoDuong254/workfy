@@ -17,7 +17,7 @@ const CompanyPage = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [dataInit, setDataInit] = useState<ICompany | null>(null);
 
-  const tableRef = useRef<ActionType>();
+  const tableRef = useRef<ActionType | undefined>(undefined);
 
   const isFetching = useAppSelector((state) => state.company.isFetching);
   const meta = useAppSelector((state) => state.company.meta);
@@ -50,7 +50,9 @@ const CompanyPage = () => {
       width: 50,
       align: "center",
       render: (text, record, index) => {
-        return <>{index + 1 + (meta.current - 1) * meta.pageSize}</>;
+        const current = meta?.current || 1;
+        const pageSize = meta?.pageSize || 10;
+        return <>{index + 1 + (current - 1) * pageSize}</>;
       },
       hideInSearch: true,
     },
