@@ -44,7 +44,7 @@ export interface ICompany {
   logo: string;
   description?: string;
   createdBy?: string;
-  deleted?:boolean;
+  deleted?: boolean;
   deletedAt?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -68,7 +68,7 @@ export interface IUser {
     name: string;
   };
   createdBy?: string;
-  deleted?:boolean;
+  deleted?: boolean;
   deletedAt?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -93,7 +93,7 @@ export interface IJob {
   isActive: boolean;
 
   createdBy?: string;
-  deleted?:boolean;
+  deleted?: boolean;
   deletedAt?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -124,7 +124,7 @@ export interface IResume {
     updatedBy: { _id: string; email: string };
   }[];
   createdBy?: string;
-  deleted?:boolean;
+  deleted?: boolean;
   deletedAt?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -138,7 +138,7 @@ export interface IPermission {
   module?: string;
 
   createdBy?: string;
-  deleted?:boolean;
+  deleted?: boolean;
   deletedAt?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -152,7 +152,7 @@ export interface IRole {
   permissions: IPermission[] | string[];
 
   createdBy?: string;
-  deleted?:boolean;
+  deleted?: boolean;
   deletedAt?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -164,7 +164,7 @@ export interface ISubscribers {
   email?: string;
   skills: string[];
   createdBy?: string;
-  deleted?:boolean;
+  deleted?: boolean;
   deletedAt?: boolean | null;
   createdAt?: string;
   updatedAt?: string;

@@ -70,6 +70,5 @@ export const UserSchema = SchemaFactory.createForClass(User);
 UserSchema.plugin(MongooseDelete, {
   deletedAt: true,
   deletedBy: true,
-  overrideMethods: "all",
-  indexFields: ["deleted"],
+  overrideMethods: true,
 });

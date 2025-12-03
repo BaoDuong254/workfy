@@ -20,7 +20,7 @@ const PermissionPage = () => {
   const [dataInit, setDataInit] = useState<IPermission | null>(null);
   const [openViewDetail, setOpenViewDetail] = useState<boolean>(false);
 
-  const tableRef = useRef<ActionType>(null);
+  const tableRef = useRef<ActionType>();
 
   const isFetching = useAppSelector((state) => state.permission.isFetching);
   const meta = useAppSelector((state) => state.permission.meta);
@@ -35,7 +35,7 @@ const PermissionPage = () => {
         reloadTable();
       } else {
         notification.error({
-          title: "Có lỗi xảy ra",
+          message: "Có lỗi xảy ra",
           description: res.message,
         });
       }

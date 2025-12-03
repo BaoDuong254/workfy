@@ -40,7 +40,7 @@ const ApplyModal = (props: IProps) => {
           setIsModalOpen(false);
         } else {
           notification.error({
-            title: "Có lỗi xảy ra",
+            message: "Có lỗi xảy ra",
             description: res.message,
           });
         }

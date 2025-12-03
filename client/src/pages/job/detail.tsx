@@ -6,7 +6,7 @@ import styles from "styles/client.module.scss";
 import parse from "html-react-parser";
 import { Col, Divider, Row, Skeleton, Tag } from "antd";
 import { DollarOutlined, EnvironmentOutlined, HistoryOutlined } from "@ant-design/icons";
-import { getLocationName, getStaticAssetUrl } from "@/config/utils";
+import { getLocationName } from "@/config/utils";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import ApplyModal from "@/components/client/modal/apply.modal";
@@ -79,7 +79,10 @@ const ClientJobDetailPage = (props: any) => {
               <Col span={24} md={8}>
                 <div className={styles["company"]}>
                   <div>
-                    <img alt='example' src={getStaticAssetUrl(`/images/company/${jobDetail.company?.logo}`)} />
+                    <img
+                      alt='example'
+                      src={`${import.meta.env.VITE_BACKEND_URL}/images/company/${jobDetail.company?.logo}`}
+                    />
                   </div>
                   <div>{jobDetail.company?.name}</div>
                 </div>

@@ -83,20 +83,3 @@ export function colorMethod(method: "POST" | "PUT" | "GET" | "DELETE" | string) 
       return grey[10];
   }
 }
-
-/**
- * Get full URL for static assets (images, files)
- * In production with Nginx proxy, use relative path
- * In development, use VITE_BACKEND_URL
- */
-export const getStaticAssetUrl = (path: string): string => {
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
-
-  // If VITE_BACKEND_URL is not defined or is undefined, use relative path (for production)
-  if (!backendUrl || backendUrl === "undefined") {
-    return path.startsWith("/") ? path : `/${path}`;
-  }
-
-  // For development, prepend backend URL
-  return `${backendUrl}${path.startsWith("/") ? path : `/${path}`}`;
-};

@@ -19,7 +19,7 @@ const UserPage = () => {
   const [dataInit, setDataInit] = useState<IUser | null>(null);
   const [openViewDetail, setOpenViewDetail] = useState<boolean>(false);
 
-  const tableRef = useRef<ActionType>(null);
+  const tableRef = useRef<ActionType>();
 
   const isFetching = useAppSelector((state) => state.user.isFetching);
   const meta = useAppSelector((state) => state.user.meta);
@@ -34,7 +34,7 @@ const UserPage = () => {
         reloadTable();
       } else {
         notification.error({
-          title: "Có lỗi xảy ra",
+          message: "Có lỗi xảy ra",
           description: res.message,
         });
       }

@@ -14,7 +14,7 @@ import Access from "@/components/share/access";
 import { ALL_PERMISSIONS } from "@/config/permissions";
 
 const JobPage = () => {
-  const tableRef = useRef<ActionType>(null);
+  const tableRef = useRef<ActionType>();
 
   const isFetching = useAppSelector((state) => state.job.isFetching);
   const meta = useAppSelector((state) => state.job.meta);
@@ -30,7 +30,7 @@ const JobPage = () => {
         reloadTable();
       } else {
         notification.error({
-          title: "Có lỗi xảy ra",
+          message: "Có lỗi xảy ra",
           description: res.message,
         });
       }

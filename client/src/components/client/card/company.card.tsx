@@ -1,5 +1,5 @@
 import { callFetchCompany } from "@/config/api";
-import { convertSlug, getStaticAssetUrl } from "@/config/utils";
+import { convertSlug } from "@/config/utils";
 import { ICompany } from "@/types/backend";
 import { Card, Col, Divider, Empty, Pagination, Row, Spin } from "antd";
 import { useState, useEffect } from "react";
@@ -84,7 +84,7 @@ const CompanyCard = (props: IProps) => {
                     hoverable
                     cover={
                       <div className={styles["card-customize"]}>
-                        <img alt='example' src={getStaticAssetUrl(`/images/company/${item?.logo}`)} />
+                        <img alt='example' src={`${import.meta.env.VITE_BACKEND_URL}/images/company/${item?.logo}`} />
                       </div>
                     }
                   >

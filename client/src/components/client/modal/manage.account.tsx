@@ -7,7 +7,7 @@ import { callFetchResumeByUser, callGetSubscriberSkills, callUpdateSubscriber } 
 import type { ColumnsType } from "antd/es/table";
 import dayjs from "dayjs";
 import { MonitorOutlined } from "@ant-design/icons";
-import { SKILLS_LIST, getStaticAssetUrl } from "@/config/utils";
+import { SKILLS_LIST } from "@/config/utils";
 import { useAppSelector } from "@/redux/hooks";
 
 interface IProps {
@@ -65,7 +65,7 @@ const UserResume = (props: any) => {
       dataIndex: "",
       render(value, record, index) {
         return (
-          <a href={getStaticAssetUrl(`/images/resume/${record?.url}`)} target='_blank'>
+          <a href={`${import.meta.env.VITE_BACKEND_URL}/images/resume/${record?.url}`} target='_blank'>
             Chi tiết
           </a>
         );
@@ -113,7 +113,7 @@ const JobByEmail = (props: any) => {
       message.success("Cập nhật thông tin thành công");
     } else {
       notification.error({
-        title: "Có lỗi xảy ra",
+        message: "Có lỗi xảy ra",
         description: res.message,
       });
     }

@@ -51,6 +51,5 @@ export const CompanySchema = SchemaFactory.createForClass(Company);
 CompanySchema.plugin(MongooseDelete, {
   deletedAt: true,
   deletedBy: true,
-  overrideMethods: "all",
-  indexFields: ["deleted"],
+  overrideMethods: true,
 });

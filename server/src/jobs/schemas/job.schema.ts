@@ -76,6 +76,5 @@ export const JobSchema = SchemaFactory.createForClass(Job);
 JobSchema.plugin(MongooseDelete, {
   deletedAt: true,
   deletedBy: true,
-  overrideMethods: "all",
-  indexFields: ["deleted"],
+  overrideMethods: true,
 });

@@ -37,7 +37,7 @@ const LoginPage = () => {
       window.location.href = callback ? callback : "/";
     } else {
       notification.error({
-        title: "Có lỗi xảy ra",
+        message: "Có lỗi xảy ra",
         description: res.message && Array.isArray(res.message) ? res.message[0] : res.message,
         duration: 5,
       });

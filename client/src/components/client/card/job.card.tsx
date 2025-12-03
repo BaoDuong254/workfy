@@ -1,5 +1,5 @@
 import { callFetchJob } from "@/config/api";
-import { LOCATION_LIST, convertSlug, getLocationName, getStaticAssetUrl } from "@/config/utils";
+import { LOCATION_LIST, convertSlug, getLocationName } from "@/config/utils";
 import { IJob } from "@/types/backend";
 import { EnvironmentOutlined, ThunderboltOutlined } from "@ant-design/icons";
 import { Card, Col, Empty, Pagination, Row, Spin } from "antd";
@@ -83,7 +83,10 @@ const JobCard = (props: IProps) => {
                   <Card size='small' title={null} hoverable onClick={() => handleViewDetailJob(item)}>
                     <div className={styles["card-job-content"]}>
                       <div className={styles["card-job-left"]}>
-                        <img alt='example' src={getStaticAssetUrl(`/images/company/${item?.company?.logo}`)} />
+                        <img
+                          alt='example'
+                          src={`${import.meta.env.VITE_BACKEND_URL}/images/company/${item?.company?.logo}`}
+                        />
                       </div>
                       <div className={styles["card-job-right"]}>
                         <div className={styles["job-title"]}>{item.name}</div>
