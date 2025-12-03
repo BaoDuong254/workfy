@@ -42,4 +42,4 @@ COPY public ./public
 EXPOSE 4001
 
 # Start the application
-CMD ["npm", "start:prod"]
+CMD ["npm", "run", "start:prod"]
