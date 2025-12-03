@@ -10,6 +10,7 @@ import { callCreateCompany, callUpdateCompany, callUploadSingleFile } from "@/co
 import { ICompany } from "@/types/backend";
 import { v4 as uuidv4 } from "uuid";
 import enUS from "antd/lib/locale/en_US";
+import { getStaticAssetUrl } from "@/config/utils";
 
 interface IProps {
   openModal: boolean;
@@ -247,7 +248,7 @@ const ModalCompany = (props: IProps) => {
                                 uid: uuidv4(),
                                 name: dataInit?.logo ?? "",
                                 status: "done",
-                                url: `${import.meta.env.VITE_BACKEND_URL}/images/company/${dataInit?.logo}`,
+                                url: getStaticAssetUrl(`/images/company/${dataInit?.logo}`),
                               },
                             ]
                           : []
