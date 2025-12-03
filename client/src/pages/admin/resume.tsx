@@ -15,7 +15,7 @@ import { ALL_PERMISSIONS } from "@/config/permissions";
 import Access from "@/components/share/access";
 
 const ResumePage = () => {
-  const tableRef = useRef<ActionType>();
+  const tableRef = useRef<ActionType>(null);
 
   const isFetching = useAppSelector((state) => state.resume.isFetching);
   const meta = useAppSelector((state) => state.resume.meta);
@@ -33,7 +33,7 @@ const ResumePage = () => {
         reloadTable();
       } else {
         notification.error({
-          message: "Có lỗi xảy ra",
+          title: "Có lỗi xảy ra",
           description: res.message,
         });
       }

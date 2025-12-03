@@ -24,7 +24,7 @@ export class RolesService {
       throw new BadRequestException(`Role với name="${name}" đã tồn tại!`);
     }
 
-    const newRole = await this.roleModel.create({
+    const newRole = (await this.roleModel.create({
       name,
       description,
       isActive,
@@ -33,11 +33,11 @@ export class RolesService {
         _id: user._id,
         email: user.email,
       },
-    });
+    } as unknown as Role)) as RoleDocument;
 
     return {
-      _id: newRole?._id,
-      createdAt: newRole?.createdAt,
+      _id: newRole._id,
+      createdAt: newRole.createdAt,
     };
   }
 
@@ -56,9 +56,9 @@ export class RolesService {
       .find(filter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort(sort as any)
+      .sort(sort as Record<string, 1 | -1>)
       .populate(population)
-      .select(projection as any)
+      .select(projection as string | Record<string, number>)
       .exec();
 
     return {

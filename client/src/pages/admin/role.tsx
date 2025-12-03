@@ -16,7 +16,7 @@ import Access from "@/components/share/access";
 const RolePage = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
-  const tableRef = useRef<ActionType>();
+  const tableRef = useRef<ActionType>(null);
 
   const isFetching = useAppSelector((state) => state.role.isFetching);
   const meta = useAppSelector((state) => state.role.meta);
@@ -31,7 +31,7 @@ const RolePage = () => {
         reloadTable();
       } else {
         notification.error({
-          message: "Có lỗi xảy ra",
+          title: "Có lỗi xảy ra",
           description: res.message,
         });
       }

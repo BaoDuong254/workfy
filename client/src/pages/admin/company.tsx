@@ -32,7 +32,7 @@ const CompanyPage = () => {
         reloadTable();
       } else {
         notification.error({
-          message: "Có lỗi xảy ra",
+          title: "Có lỗi xảy ra",
           description: res.message,
         });
       }

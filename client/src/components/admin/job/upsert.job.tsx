@@ -111,7 +111,7 @@ const ViewUpsertJob = (props: any) => {
         navigate("/admin/job");
       } else {
         notification.error({
-          message: "Có lỗi xảy ra",
+          title: "Có lỗi xảy ra",
           description: res.message,
         });
       }
@@ -142,7 +142,7 @@ const ViewUpsertJob = (props: any) => {
         navigate("/admin/job");
       } else {
         notification.error({
-          message: "Có lỗi xảy ra",
+          title: "Có lỗi xảy ra",
           description: res.message,
         });
       }
@@ -280,7 +280,7 @@ const ViewUpsertJob = (props: any) => {
                 <ProFormDatePicker
                   label='Ngày bắt đầu'
                   name='startDate'
-                  normalize={(value) => value && dayjs(value, "DD/MM/YYYY")}
+                  normalize={(value: any) => value && dayjs(value, "DD/MM/YYYY")}
                   fieldProps={{
                     format: "DD/MM/YYYY",
                   }}
@@ -292,7 +292,7 @@ const ViewUpsertJob = (props: any) => {
                 <ProFormDatePicker
                   label='Ngày kết thúc'
                   name='endDate'
-                  normalize={(value) => value && dayjs(value, "DD/MM/YYYY")}
+                  normalize={(value: any) => value && dayjs(value, "DD/MM/YYYY")}
                   fieldProps={{
                     format: "DD/MM/YYYY",
                   }}

@@ -45,7 +45,7 @@ export class UsersService {
         _id: user._id,
         email: user.email,
       },
-    });
+    } as unknown as UserM);
     return newUser;
   }
 
@@ -64,7 +64,7 @@ export class UsersService {
       .find(filter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort(sort as any)
+      .sort(sort as Record<string, 1 | -1>)
       .select("-password")
       .populate(population)
       .exec();
@@ -158,7 +158,7 @@ export class UsersService {
       gender,
       address,
       role: userRole?._id,
-    });
+    } as unknown as UserM);
     return newRegisteredUser;
   }
 

@@ -113,7 +113,7 @@ const JobByEmail = (props: any) => {
       message.success("Cập nhật thông tin thành công");
     } else {
       notification.error({
-        message: "Có lỗi xảy ra",
+        title: "Có lỗi xảy ra",
         description: res.message,
       });
     }

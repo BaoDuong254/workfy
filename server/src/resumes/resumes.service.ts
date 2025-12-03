@@ -18,7 +18,7 @@ export class ResumesService {
     const { url, companyId, jobId } = createUserCvDto;
     const { email, _id } = user;
 
-    const newCV = await this.resumeModel.create({
+    const newCV = (await this.resumeModel.create({
       url,
       companyId,
       email,
@@ -36,11 +36,11 @@ export class ResumesService {
           },
         },
       ],
-    });
+    } as unknown as Resume)) as ResumeDocument;
 
     return {
-      _id: newCV?._id,
-      createdAt: newCV?.createdAt,
+      _id: newCV._id,
+      createdAt: newCV.createdAt,
     };
   }
 
@@ -59,9 +59,9 @@ export class ResumesService {
       .find(filter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort(sort as any)
+      .sort(sort as Record<string, 1 | -1>)
       .populate(population)
-      .select(projection as any)
+      .select(projection as string | Record<string, number>)
       .exec();
 
     return {
@@ -86,7 +86,7 @@ export class ResumesService {
   async findByUsers(user: IUser) {
     return await this.resumeModel
       .find({
-        userId: user._id,
+        userId: user._id as unknown as mongoose.Schema.Types.ObjectId,
       })
       .sort("-createdAt")
       .populate([

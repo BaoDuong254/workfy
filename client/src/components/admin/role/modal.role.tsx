@@ -112,7 +112,7 @@ const ModalRole = (props: IProps) => {
         reloadTable();
       } else {
         notification.error({
-          message: "Có lỗi xảy ra",
+          title: "Có lỗi xảy ra",
           description: res.message,
         });
       }
@@ -131,7 +131,7 @@ const ModalRole = (props: IProps) => {
         reloadTable();
       } else {
         notification.error({
-          message: "Có lỗi xảy ra",
+          title: "Có lỗi xảy ra",
           description: res.message,
         });
       }
