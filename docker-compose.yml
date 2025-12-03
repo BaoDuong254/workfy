@@ -1,0 +1,36 @@
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: ${DOCKERHUB_USERNAME}/workfy-server:latest
+    container_name: workfy-server
+    restart: unless-stopped
+    ports:
+      - "4001:4001"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server/public:/app/public
+    networks:
+      - workfy-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: ${DOCKERHUB_USERNAME}/workfy-client:latest
+    container_name: workfy-client
+    restart: unless-stopped
+    ports:
+      - "4000:80"
+    env_file:
+      - ./client/.env
+    depends_on:
+      - server
+    networks:
+      - workfy-network
+
+networks:
+  workfy-network:
+    driver: bridge
