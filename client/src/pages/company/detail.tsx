@@ -6,6 +6,7 @@ import styles from "styles/client.module.scss";
 import parse from "html-react-parser";
 import { Col, Divider, Row, Skeleton } from "antd";
 import { EnvironmentOutlined } from "@ant-design/icons";
+import { getStaticAssetUrl } from "@/config/utils";
 
 const ClientCompanyDetailPage = (props: any) => {
   const [companyDetail, setCompanyDetail] = useState<ICompany | null>(null);
@@ -52,10 +53,7 @@ const ClientCompanyDetailPage = (props: any) => {
               <Col span={24} md={8}>
                 <div className={styles["company"]}>
                   <div>
-                    <img
-                      alt='example'
-                      src={`${import.meta.env.VITE_BACKEND_URL}/images/company/${companyDetail?.logo}`}
-                    />
+                    <img alt='example' src={getStaticAssetUrl(`/images/company/${companyDetail?.logo}`)} />
                   </div>
                   <div>{companyDetail?.name}</div>
                 </div>
