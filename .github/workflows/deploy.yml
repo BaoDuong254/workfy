@@ -99,7 +99,7 @@ jobs:
                   username: ${{ secrets.USERNAME_VPS }}
                   key: ${{ secrets.KEY_VPS }}
                   port: ${{ secrets.PORT_VPS }}
-                  source: "server/.env,client/.env,docker-compose.yml"
+                  source: "server/.env,client/.env,docker-compose.yml,server/public"
                   target: "~/workfy"
 
             - name: Deploy to LXC via SSH
