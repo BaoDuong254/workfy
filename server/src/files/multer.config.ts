@@ -39,8 +39,11 @@ export class MulterConfigService implements MulterOptionsFactory {
     return {
       storage: diskStorage({
         destination: (req, file, cb) => {
-          const folderHeader = req?.headers?.folder_type ?? "default";
+          // Try both folder_type and folder-type (nginx may convert underscores to hyphens)
+          const folderHeader = req?.headers?.folder_type ?? req?.headers?.["folder-type"] ?? "default";
           const folder = Array.isArray(folderHeader) ? folderHeader[0] : folderHeader;
+          console.log("📁 Upload folder header:", req?.headers?.folder_type, req?.headers?.["folder-type"]);
+          console.log("📁 Using folder:", folder);
           this.ensureExists(`public/images/${folder}`);
           cb(null, join(this.getRootPath(), `public/images/${folder}`));
         },
