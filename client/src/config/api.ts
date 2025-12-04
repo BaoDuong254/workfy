@@ -14,7 +14,7 @@ import {
 import axios from "config/axios-customize";
 
 /**
- * 
+ *
 Module Auth
  */
 export const callRegister = (
@@ -52,17 +52,16 @@ export const callUploadSingleFile = (file: any, folderType: string) => {
   bodyFormData.append("fileUpload", file);
   return axios<IBackendRes<{ fileName: string }>>({
     method: "post",
-    url: "/api/v1/files/upload",
+    url: `/api/v1/files/upload?folder=${folderType}`,
     data: bodyFormData,
     headers: {
       "Content-Type": "multipart/form-data",
-      folder_type: folderType,
     },
   });
 };
 
 /**
- * 
+ *
 Module Company
  */
 export const callCreateCompany = (name: string, address: string, description: string, logo: string) => {
@@ -86,7 +85,7 @@ export const callFetchCompanyById = (id: string) => {
 };
 
 /**
- * 
+ *
 Module User
  */
 export const callCreateUser = (user: IUser) => {
@@ -106,7 +105,7 @@ export const callFetchUser = (query: string) => {
 };
 
 /**
- * 
+ *
 Module Job
  */
 export const callCreateJob = (job: IJob) => {
@@ -130,7 +129,7 @@ export const callFetchJobById = (id: string) => {
 };
 
 /**
- * 
+ *
 Module Resume
  */
 export const callCreateResume = (url: string, companyId: any, jobId: any) => {
@@ -158,7 +157,7 @@ export const callFetchResumeByUser = () => {
 };
 
 /**
- * 
+ *
 Module Permission
  */
 export const callCreatePermission = (permission: IPermission) => {
@@ -182,7 +181,7 @@ export const callFetchPermissionById = (id: string) => {
 };
 
 /**
- * 
+ *
 Module Role
  */
 export const callCreateRole = (role: IRole) => {
@@ -206,7 +205,7 @@ export const callFetchRoleById = (id: string) => {
 };
 
 /**
- * 
+ *
 Module Subscribers
  */
 export const callCreateSubscriber = (subs: ISubscribers) => {
