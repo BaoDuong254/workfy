@@ -8,8 +8,7 @@ COPY package*.json ./
 COPY tsconfig*.json ./
 COPY vite.config.ts ./
 
-# Install dependencies with legacy peer deps for React project
-# Increase memory limit and use npm install instead of npm ci to avoid SIGBUS errors
+# Install dependencies
 RUN npm ci
 
 # Copy source code

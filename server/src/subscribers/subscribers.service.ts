@@ -22,7 +22,7 @@ export class SubscribersService {
       throw new BadRequestException(`Email: ${email} đã tồn tại trên hệ thống. Vui lòng sử dụng email khác.`);
     }
 
-    const newSubs = (await this.subscriberModel.create({
+    const newSubs = await this.subscriberModel.create({
       name,
       email,
       skills,
@@ -30,11 +30,11 @@ export class SubscribersService {
         _id: user._id,
         email: user.email,
       },
-    } as unknown as Subscriber)) as SubscriberDocument;
+    });
 
     return {
-      _id: newSubs._id,
-      createdAt: newSubs.createdAt,
+      _id: newSubs?._id,
+      createdBy: newSubs?.createdAt,
     };
   }
 
@@ -53,8 +53,8 @@ export class SubscribersService {
       .find(filter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort(sort as Record<string, 1 | -1>)
-      .select(projection as string | Record<string, number>)
+      .sort(sort as any)
+      .select(projection as any)
       .populate(population)
       .exec();
 

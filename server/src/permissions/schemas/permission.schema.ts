@@ -48,8 +48,4 @@ export class Permission {
 
 export const PermissionSchema = SchemaFactory.createForClass(Permission);
 
-PermissionSchema.plugin(MongooseDelete, {
-  deletedAt: true,
-  deletedBy: true,
-  overrideMethods: true,
-});
+PermissionSchema.plugin(MongooseDelete, { deletedAt: true, deletedBy: false, overrideMethods: "all" });

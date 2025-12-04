@@ -49,8 +49,4 @@ export class Role {
 
 export const RoleSchema = SchemaFactory.createForClass(Role);
 
-RoleSchema.plugin(MongooseDelete, {
-  deletedAt: true,
-  deletedBy: true,
-  overrideMethods: true,
-});
+RoleSchema.plugin(MongooseDelete, { deletedAt: true, deletedBy: false, overrideMethods: "all" });

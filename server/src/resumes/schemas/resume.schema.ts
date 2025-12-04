@@ -66,8 +66,4 @@ export class Resume {
 
 export const ResumeSchema = SchemaFactory.createForClass(Resume);
 
-ResumeSchema.plugin(MongooseDelete, {
-  deletedAt: true,
-  deletedBy: true,
-  overrideMethods: true,
-});
+ResumeSchema.plugin(MongooseDelete, { deletedAt: true, deletedBy: false, overrideMethods: "all" });

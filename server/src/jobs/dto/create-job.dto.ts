@@ -123,7 +123,7 @@ export class CreateJobDto {
   @IsNotEmpty({
     message: "Ngày bắt đầu không được để trống",
   })
-  @Transform(({ value }: { value: string | number | Date }) => new Date(value))
+  @Transform(({ value }) => new Date(value))
   @IsDate({
     message: "Ngày bắt đầu phải là một ngày hợp lệ",
   })
@@ -137,7 +137,7 @@ export class CreateJobDto {
   @IsNotEmpty({
     message: "Ngày kết thúc không được để trống",
   })
-  @Transform(({ value }: { value: string | number | Date }) => new Date(value))
+  @Transform(({ value }) => new Date(value))
   @IsDate({
     message: "Ngày kết thúc phải là một ngày hợp lệ",
   })

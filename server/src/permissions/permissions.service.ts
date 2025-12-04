@@ -23,7 +23,7 @@ export class PermissionsService {
       throw new BadRequestException(`Permission với apiPath=${apiPath} , method=${method} đã tồn tại!`);
     }
 
-    const newPermission = (await this.permissionModel.create({
+    const newPermission = await this.permissionModel.create({
       name,
       apiPath,
       method,
@@ -32,11 +32,11 @@ export class PermissionsService {
         _id: user._id,
         email: user.email,
       },
-    } as unknown as Permission)) as PermissionDocument;
+    });
 
     return {
-      _id: newPermission._id,
-      createdAt: newPermission.createdAt,
+      _id: newPermission?._id,
+      createdAt: newPermission?.createdAt,
     };
   }
 
@@ -55,9 +55,9 @@ export class PermissionsService {
       .find(filter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort(sort as Record<string, 1 | -1>)
+      .sort(sort as any)
       .populate(population)
-      .select(projection as string | Record<string, number>)
+      .select(projection as any)
       .exec();
 
     return {

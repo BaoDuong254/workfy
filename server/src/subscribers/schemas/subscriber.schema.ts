@@ -45,8 +45,4 @@ export class Subscriber {
 
 export const SubscriberSchema = SchemaFactory.createForClass(Subscriber);
 
-SubscriberSchema.plugin(MongooseDelete, {
-  deletedAt: true,
-  deletedBy: true,
-  overrideMethods: true,
-});
+SubscriberSchema.plugin(MongooseDelete, { deletedAt: true, deletedBy: false, overrideMethods: "all" });

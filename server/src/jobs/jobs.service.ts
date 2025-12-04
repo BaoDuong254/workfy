@@ -16,7 +16,7 @@ export class JobsService {
     const { name, skills, company, salary, quantity, level, description, startDate, endDate, isActive, location } =
       createJobDto;
 
-    const newJob = (await this.jobModel.create({
+    const newJob = await this.jobModel.create({
       name,
       skills,
       company,
@@ -32,11 +32,11 @@ export class JobsService {
         _id: user._id,
         email: user.email,
       },
-    } as unknown as Job)) as JobDocument;
+    });
 
     return {
-      _id: newJob._id,
-      createdAt: newJob.createdAt,
+      _id: newJob?._id,
+      createdAt: newJob?.createdAt,
     };
   }
 
@@ -55,7 +55,7 @@ export class JobsService {
       .find(filter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort(sort as Record<string, 1 | -1>)
+      .sort(sort as any)
       .populate(population)
       .exec();
 

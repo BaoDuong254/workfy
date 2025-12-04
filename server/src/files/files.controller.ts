@@ -1,5 +1,17 @@
-import { Controller, Get, Post, Param, Delete, UseInterceptors, UploadedFile, UseFilters } from "@nestjs/common";
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  UseInterceptors,
+  UploadedFile,
+  UseFilters,
+} from "@nestjs/common";
 import { FilesService } from "./files.service";
+import { UpdateFileDto } from "./dto/update-file.dto";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { ResponseMessage } from "src/decorator/customize";
 import { HttpExceptionFilter } from "src/core/http-exception.filter";
@@ -29,6 +41,11 @@ export class FilesController {
   @Get(":id")
   findOne(@Param("id") id: string) {
     return this.filesService.findOne(+id);
+  }
+
+  @Patch(":id")
+  update(@Param("id") id: string, @Body() updateFileDto: UpdateFileDto) {
+    return this.filesService.update(+id, updateFileDto);
   }
 
   @Delete(":id")

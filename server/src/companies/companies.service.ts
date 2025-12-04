@@ -19,7 +19,7 @@ export class CompaniesService {
         _id: user._id,
         email: user.email,
       },
-    } as unknown as Company);
+    });
   }
 
   async findAll(currentPage: number, limit: number, query: string) {
@@ -35,7 +35,7 @@ export class CompaniesService {
       .find(filter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort(sort as Record<string, 1 | -1>)
+      .sort(sort as any)
       .populate(population)
       .exec();
     return {
