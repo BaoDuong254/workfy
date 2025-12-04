@@ -276,18 +276,18 @@ const ViewUpsertJob = (props: any) => {
               )}
             </Row>
             <Row gutter={[20, 20]}>
-                <Col span={24} md={6}>
+              <Col span={24} md={6}>
                 <ProFormDatePicker
                   label='Ngày bắt đầu'
                   name='startDate'
                   normalize={(value: dayjs.Dayjs | null) => value && dayjs(value, "DD/MM/YYYY")}
                   fieldProps={{
-                  format: "DD/MM/YYYY",
+                    format: "DD/MM/YYYY",
                   }}
                   rules={[{ required: true, message: "Vui lòng chọn ngày cấp" }]}
                   placeholder='dd/mm/yyyy'
                 />
-                </Col>
+              </Col>
               <Col span={24} md={6}>
                 <ProFormDatePicker
                   label='Ngày kết thúc'

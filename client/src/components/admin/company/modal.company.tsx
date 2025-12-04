@@ -38,6 +38,7 @@ const ModalCompany = (props: IProps) => {
 
   const [loadingUpload, setLoadingUpload] = useState<boolean>(false);
   const [dataLogo, setDataLogo] = useState<ICompanyLogo[]>([]);
+  const [fileLogo, setFileLogo] = useState<any>(null);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
   const [previewTitle, setPreviewTitle] = useState("");
@@ -54,14 +55,33 @@ const ModalCompany = (props: IProps) => {
   const submitCompany = async (valuesForm: ICompanyForm) => {
     const { name, address } = valuesForm;
 
-    if (dataLogo.length === 0) {
+    // Nếu đang update và có logo cũ, hoặc đang tạo mới nhưng chưa chọn file
+    if (!dataInit?._id && !fileLogo && dataLogo.length === 0) {
       message.error("Vui lòng upload ảnh Logo");
       return;
     }
 
+    let logoFileName = dataLogo.length > 0 ? dataLogo[0].name : "";
+
+    // Nếu có file mới được chọn, upload lên server
+    if (fileLogo) {
+      setLoadingUpload(true);
+      const resUpload = await callUploadSingleFile(fileLogo, "company");
+      setLoadingUpload(false);
+      if (resUpload && resUpload.data) {
+        logoFileName = resUpload.data.fileName;
+      } else {
+        notification.error({
+          message: "Có lỗi xảy ra khi upload logo",
+          description: resUpload.message,
+        });
+        return;
+      }
+    }
+
     if (dataInit?._id) {
       //update
-      const res = await callUpdateCompany(dataInit._id, name, address, value, dataLogo[0].name);
+      const res = await callUpdateCompany(dataInit._id, name, address, value, logoFileName);
       if (res.data) {
         message.success("Cập nhật company thành công");
         handleReset();
@@ -74,7 +94,7 @@ const ModalCompany = (props: IProps) => {
       }
     } else {
       //create
-      const res = await callCreateCompany(name, address, value, dataLogo[0].name);
+      const res = await callCreateCompany(name, address, value, logoFileName);
       if (res.data) {
         message.success("Thêm mới company thành công");
         handleReset();
@@ -92,6 +112,8 @@ const ModalCompany = (props: IProps) => {
     form.resetFields();
     setValue("");
     setDataInit(null);
+    setFileLogo(null);
+    setDataLogo([]);
 
     //add animation when closing modal
     setAnimation("close");
@@ -128,44 +150,23 @@ const ModalCompany = (props: IProps) => {
     const isJpgOrPng = file.type === "image/jpeg" || file.type === "image/png";
     if (!isJpgOrPng) {
       message.error("You can only upload JPG/PNG file!");
+      return Upload.LIST_IGNORE;
     }
     const isLt2M = file.size / 1024 / 1024 < 2;
     if (!isLt2M) {
       message.error("Image must smaller than 2MB!");
+      return Upload.LIST_IGNORE;
     }
-    return isJpgOrPng && isLt2M;
-  };
-
-  const handleChange = (info: any) => {
-    if (info.file.status === "uploading") {
-      setLoadingUpload(true);
-    }
-    if (info.file.status === "done") {
-      setLoadingUpload(false);
-    }
-    if (info.file.status === "error") {
-      setLoadingUpload(false);
-      message.error(info?.file?.error?.event?.message ?? "Đã có lỗi xảy ra khi upload file.");
-    }
-  };
-
-  const handleUploadFileLogo = async ({ file, onSuccess, onError }: any) => {
-    const res = await callUploadSingleFile(file, "company");
-    if (res && res.data) {
-      setDataLogo([
-        {
-          name: res.data.fileName,
-          uid: uuidv4(),
-        },
-      ]);
-      if (onSuccess) onSuccess("ok");
-    } else {
-      if (onError) {
-        setDataLogo([]);
-        const error = new Error(res.message);
-        onError({ event: error });
-      }
-    }
+    // Lưu file vào state, không upload ngay
+    setFileLogo(file);
+    setDataLogo([
+      {
+        name: file.name,
+        uid: uuidv4(),
+      },
+    ]);
+    message.success(`${file.name} đã được chọn`);
+    return false; // Ngăn không cho upload tự động
   };
 
   return (
@@ -236,9 +237,7 @@ const ModalCompany = (props: IProps) => {
                       className='avatar-uploader'
                       maxCount={1}
                       multiple={false}
-                      customRequest={handleUploadFileLogo}
                       beforeUpload={beforeUpload}
-                      onChange={handleChange}
                       onRemove={(file) => handleRemoveFile(file)}
                       onPreview={handlePreview}
                       defaultFileList={
