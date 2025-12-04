@@ -40,7 +40,7 @@ export class CompaniesService {
       .exec();
     return {
       meta: {
-        currentPage,
+        current: currentPage,
         pageSize: limit,
         pages: totalPages,
         total: totalItems,
