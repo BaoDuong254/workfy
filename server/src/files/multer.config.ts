@@ -42,7 +42,7 @@ export class MulterConfigService implements MulterOptionsFactory {
           // Get folder from query parameter instead of header (more reliable with nginx proxy)
           const folderQuery = req?.query?.folder ?? "default";
           const folder = (Array.isArray(folderQuery) ? folderQuery[0] : folderQuery) as string;
-          console.log("📁 Upload folder from query:", req?.query?.folder);
+          console.log("📁 Upload folder from query string:", req?.query?.folder);
           console.log("📁 Using folder:", folder);
           this.ensureExists(`public/images/${folder}`);
           cb(null, join(this.getRootPath(), `public/images/${folder}`));
