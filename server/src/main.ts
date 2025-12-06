@@ -46,7 +46,9 @@ async function bootstrap() {
   });
 
   // Enable API versioning
-  app.setGlobalPrefix("api");
+  app.setGlobalPrefix("api", {
+    exclude: ["metrics"], // Exclude Prometheus metrics from /api prefix
+  });
   app.enableVersioning({
     type: VersioningType.URI,
     defaultVersion: ["1"],
