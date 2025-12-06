@@ -3,7 +3,7 @@ import { AppModule } from "./app.module";
 import { NestExpressApplication } from "@nestjs/platform-express";
 import { join } from "path";
 import { ConfigService } from "@nestjs/config";
-import { RequestMethod, ValidationPipe, VersioningType } from "@nestjs/common";
+import { ValidationPipe, VersioningType } from "@nestjs/common";
 import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
 import { TransformInterceptor } from "src/core/transform.interceptor";
 import cookieParser from "cookie-parser";
@@ -46,12 +46,7 @@ async function bootstrap() {
   });
 
   // Enable API versioning
-  app.setGlobalPrefix("api", {
-    exclude: [
-      { path: "metrics", method: RequestMethod.ALL },
-      { path: "health", method: RequestMethod.ALL },
-    ], // Exclude Prometheus metrics and health check from /api prefix
-  });
+  app.setGlobalPrefix("api");
   app.enableVersioning({
     type: VersioningType.URI,
     defaultVersion: ["1"],

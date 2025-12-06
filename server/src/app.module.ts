@@ -22,9 +22,9 @@ import { ScheduleModule } from "@nestjs/schedule";
 import { ThrottlerModule } from "@nestjs/throttler";
 import { HealthModule } from "./health/health.module";
 import { PrometheusModule } from "@willsoto/nestjs-prometheus";
-import { makeCounterProvider, makeHistogramProvider } from "@willsoto/nestjs-prometheus";
 import { APP_INTERCEPTOR } from "@nestjs/core";
-import { MetricsInterceptor } from "./core/metrics.interceptor";
+import { MetricsInterceptor } from "src/core/metrics.interceptor";
+import { allMetricsProviders } from "src/prometheus/metrics.providers";
 
 @Module({
   imports: [
@@ -77,17 +77,7 @@ import { MetricsInterceptor } from "./core/metrics.interceptor";
       provide: APP_INTERCEPTOR,
       useClass: MetricsInterceptor,
     },
-    makeCounterProvider({
-      name: "http_requests_total",
-      help: "Total number of HTTP requests",
-      labelNames: ["method", "path", "status"],
-    }),
-    makeHistogramProvider({
-      name: "http_request_duration_seconds",
-      help: "HTTP request duration in seconds",
-      labelNames: ["method", "path", "status"],
-      buckets: [0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1, 2.5, 5, 10],
-    }),
+    ...allMetricsProviders,
   ],
 })
 export class AppModule {}
