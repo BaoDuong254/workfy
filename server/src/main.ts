@@ -3,7 +3,7 @@ import { AppModule } from "./app.module";
 import { NestExpressApplication } from "@nestjs/platform-express";
 import { join } from "path";
 import { ConfigService } from "@nestjs/config";
-import { ValidationPipe, VersioningType } from "@nestjs/common";
+import { RequestMethod, ValidationPipe, VersioningType } from "@nestjs/common";
 import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
 import { TransformInterceptor } from "src/core/transform.interceptor";
 import cookieParser from "cookie-parser";
@@ -46,7 +46,9 @@ async function bootstrap() {
   });
 
   // Enable API versioning
-  app.setGlobalPrefix("api");
+  app.setGlobalPrefix("api", {
+    exclude: [{ path: "/health", method: RequestMethod.GET }],
+  });
   app.enableVersioning({
     type: VersioningType.URI,
     defaultVersion: ["1"],

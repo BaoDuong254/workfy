@@ -32,6 +32,19 @@ services:
     networks:
       - workfy-network
 
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:latest
+    container_name: workfy-nginx-exporter
+    restart: unless-stopped
+    ports:
+      - "9113:9113"
+    command:
+      - "-nginx.scrape-uri=http://workfy-client:8080/nginx-metrics"
+    depends_on:
+      - client
+    networks:
+      - workfy-network
+
 networks:
   workfy-network:
     driver: bridge
