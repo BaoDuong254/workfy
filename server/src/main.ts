@@ -47,7 +47,7 @@ async function bootstrap() {
 
   // Enable API versioning
   app.setGlobalPrefix("api", {
-    exclude: ["metrics"], // Exclude Prometheus metrics from /api prefix
+    exclude: ["metrics", "health"], // Exclude Prometheus metrics and health check from /api prefix
   });
   app.enableVersioning({
     type: VersioningType.URI,

@@ -22,6 +22,13 @@ export class JwtAuthGuard extends AuthGuard("jwt") {
     if (isPublic) {
       return true;
     }
+
+    // Allow access to Prometheus metrics endpoint
+    const request = context.switchToHttp().getRequest();
+    if (request.url === "/metrics" || request.url.startsWith("/metrics?")) {
+      return true;
+    }
+
     return super.canActivate(context);
   }
 
